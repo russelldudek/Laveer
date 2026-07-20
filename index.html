@@ -6,6 +6,7 @@
   <meta name="description" content="Independent candidate vision by Russell Dudek for Westinghouse Director, AI Strategic Governance.">
   <title>Russell Dudek | Westinghouse Director, AI Strategic Governance</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="posture-controls.css">
 </head>
 <body>
 <header class="site-header">
@@ -35,7 +36,12 @@
         <div class="assembly-piece piece-top"></div><div class="assembly-piece piece-bottom"></div><div class="assembly-piece piece-left"></div><div class="assembly-piece piece-right"></div>
         <div class="evidence-tag tag-mission">Mission and decision boundary</div><div class="evidence-tag tag-data">Data pedigree</div><div class="evidence-tag tag-model">Model evidence</div><div class="evidence-tag tag-human">Human authority</div><div class="evidence-tag tag-control">Security and compliance</div><div class="evidence-tag tag-outcome">Outcome telemetry</div>
         <div class="lattice-core"><small>Use case</small><strong id="lattice-core-title">Engineering knowledge assistant</strong><em>Evidence travels with the work.</em></div>
-        <div class="posture-rail" aria-label="Operating postures"><div class="posture-step" data-posture="Sandbox / explore">Explore</div><div class="posture-step active" data-posture="Assisted workflow">Assist</div><div class="posture-step" data-posture="Controlled production">Control</div><div class="posture-step" data-posture="Independent assurance review">Independent review</div></div>
+        <div class="posture-rail" role="group" aria-label="Operating postures">
+          <button type="button" class="posture-step" data-posture="Sandbox / explore" aria-pressed="false">Explore</button>
+          <button type="button" class="posture-step active" data-posture="Assisted workflow" aria-pressed="true">Assist</button>
+          <button type="button" class="posture-step" data-posture="Controlled production" aria-pressed="false">Control</button>
+          <button type="button" class="posture-step" data-posture="Independent assurance review" aria-pressed="false">Independent review</button>
+        </div>
       </div>
     </div>
   </section>
