@@ -1,31 +1,31 @@
-target_sha=ed5f6bab9d9ff2a820d1c2c773514248f954d268
-run_id=29763800349
+target_sha=aa873ff21fae8ff19dc3d67273e8c0e5650de1dd
+run_id=29764002688
 --- runs ---
 {
   "total_count": 2,
   "workflow_runs": [
     {
-      "id": 29763800349,
+      "id": 29764002688,
       "name": "Regenerate aligned campaign documents",
-      "node_id": "WFR_kwLOTeL0vs8AAAAG7g-NHQ",
+      "node_id": "WFR_kwLOTeL0vs8AAAAG7hKjgA",
       "head_branch": "main",
-      "head_sha": "ed5f6bab9d9ff2a820d1c2c773514248f954d268",
+      "head_sha": "aa873ff21fae8ff19dc3d67273e8c0e5650de1dd",
       "path": ".github/workflows/regenerate-aligned-docs.yml",
-      "display_title": "Regenerate aligned campaign documents",
-      "run_number": 1,
+      "display_title": "Use robust regenerated-PDF verification",
+      "run_number": 2,
       "event": "push",
       "status": "completed",
       "conclusion": "failure",
       "workflow_id": 316876564,
-      "check_suite_id": 80600657697,
-      "check_suite_node_id": "CS_kwDOTeL0vs8AAAASxCxvIQ",
-      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349",
-      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29763800349",
+      "check_suite_id": 80601291797,
+      "check_suite_node_id": "CS_kwDOTeL0vs8AAAASxDYcFQ",
+      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688",
+      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29764002688",
       "pull_requests": [
 
       ],
-      "created_at": "2026-07-20T17:28:15Z",
-      "updated_at": "2026-07-20T17:29:16Z",
+      "created_at": "2026-07-20T17:31:24Z",
+      "updated_at": "2026-07-20T17:31:53Z",
       "actor": {
         "login": "russelldudek",
         "id": 35631821,
@@ -51,7 +51,7 @@ run_id=29763800349
       "referenced_workflows": [
 
       ],
-      "run_started_at": "2026-07-20T17:28:15Z",
+      "run_started_at": "2026-07-20T17:31:24Z",
       "triggering_actor": {
         "login": "russelldudek",
         "id": 35631821,
@@ -73,19 +73,19 @@ run_id=29763800349
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349/jobs",
-      "logs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349/logs",
-      "check_suite_url": "https://api.github.com/repos/russelldudek/Laveer/check-suites/80600657697",
-      "artifacts_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349/artifacts",
-      "cancel_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349/cancel",
-      "rerun_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349/rerun",
+      "jobs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688/jobs",
+      "logs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688/logs",
+      "check_suite_url": "https://api.github.com/repos/russelldudek/Laveer/check-suites/80601291797",
+      "artifacts_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688/artifacts",
+      "cancel_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688/cancel",
+      "rerun_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/russelldudek/Laveer/actions/workflows/316876564",
       "head_commit": {
-        "id": "ed5f6bab9d9ff2a820d1c2c773514248f954d268",
-        "tree_id": "82c38bf08cdfb1f018322f04e44ae3f74ecc4bb0",
-        "message": "Regenerate aligned campaign documents",
-        "timestamp": "2026-07-20T17:28:12Z",
+        "id": "aa873ff21fae8ff19dc3d67273e8c0e5650de1dd",
+        "tree_id": "881bd18af85f024e6a02764d73a7486b3ac500bd",
+        "message": "Use robust regenerated-PDF verification",
+        "timestamp": "2026-07-20T17:31:22Z",
         "author": {
           "name": "russelldudek",
           "email": "35631821+russelldudek@users.noreply.github.com"
@@ -233,27 +233,27 @@ run_id=29763800349
       }
     },
     {
-      "id": 29763799405,
+      "id": 29764001857,
       "name": "pages build and deployment",
-      "node_id": "WFR_kwLOTeL0vs8AAAAG7g-JbQ",
+      "node_id": "WFR_kwLOTeL0vs8AAAAG7hKgQQ",
       "head_branch": "main",
-      "head_sha": "ed5f6bab9d9ff2a820d1c2c773514248f954d268",
+      "head_sha": "aa873ff21fae8ff19dc3d67273e8c0e5650de1dd",
       "path": "dynamic/pages/pages-build-deployment",
       "display_title": "pages build and deployment",
-      "run_number": 5,
+      "run_number": 8,
       "event": "dynamic",
       "status": "completed",
-      "conclusion": "success",
+      "conclusion": "cancelled",
       "workflow_id": 316866923,
-      "check_suite_id": 80600655041,
-      "check_suite_node_id": "CS_kwDOTeL0vs8AAAASxCxkwQ",
-      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405",
-      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29763799405",
+      "check_suite_id": 80601288896,
+      "check_suite_node_id": "CS_kwDOTeL0vs8AAAASxDYQwA",
+      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857",
+      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29764001857",
       "pull_requests": [
 
       ],
-      "created_at": "2026-07-20T17:28:14Z",
-      "updated_at": "2026-07-20T17:29:17Z",
+      "created_at": "2026-07-20T17:31:23Z",
+      "updated_at": "2026-07-20T17:31:47Z",
       "actor": {
         "login": "russelldudek",
         "id": 35631821,
@@ -279,7 +279,7 @@ run_id=29763800349
       "referenced_workflows": [
 
       ],
-      "run_started_at": "2026-07-20T17:28:14Z",
+      "run_started_at": "2026-07-20T17:31:23Z",
       "triggering_actor": {
         "login": "russelldudek",
         "id": 35631821,
@@ -301,19 +301,19 @@ run_id=29763800349
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405/jobs",
-      "logs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405/logs",
-      "check_suite_url": "https://api.github.com/repos/russelldudek/Laveer/check-suites/80600655041",
-      "artifacts_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405/artifacts",
-      "cancel_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405/cancel",
-      "rerun_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763799405/rerun",
+      "jobs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857/jobs",
+      "logs_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857/logs",
+      "check_suite_url": "https://api.github.com/repos/russelldudek/Laveer/check-suites/80601288896",
+      "artifacts_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857/artifacts",
+      "cancel_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857/cancel",
+      "rerun_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764001857/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/russelldudek/Laveer/actions/workflows/316866923",
       "head_commit": {
-        "id": "ed5f6bab9d9ff2a820d1c2c773514248f954d268",
-        "tree_id": "82c38bf08cdfb1f018322f04e44ae3f74ecc4bb0",
-        "message": "Regenerate aligned campaign documents",
-        "timestamp": "2026-07-20T17:28:12Z",
+        "id": "aa873ff21fae8ff19dc3d67273e8c0e5650de1dd",
+        "tree_id": "881bd18af85f024e6a02764d73a7486b3ac500bd",
+        "message": "Use robust regenerated-PDF verification",
+        "timestamp": "2026-07-20T17:31:22Z",
         "author": {
           "name": "russelldudek",
           "email": "35631821+russelldudek@users.noreply.github.com"
@@ -468,21 +468,21 @@ run_id=29763800349
   "total_count": 1,
   "jobs": [
     {
-      "id": 88424767333,
-      "run_id": 29763800349,
+      "id": 88425453820,
+      "run_id": 29764002688,
       "workflow_name": "Regenerate aligned campaign documents",
       "head_branch": "main",
-      "run_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29763800349",
+      "run_url": "https://api.github.com/repos/russelldudek/Laveer/actions/runs/29764002688",
       "run_attempt": 1,
-      "node_id": "CR_kwDOTeL0vs8AAAAUlobfZQ",
-      "head_sha": "ed5f6bab9d9ff2a820d1c2c773514248f954d268",
-      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/jobs/88424767333",
-      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29763800349/job/88424767333",
+      "node_id": "CR_kwDOTeL0vs8AAAAUlpFY_A",
+      "head_sha": "aa873ff21fae8ff19dc3d67273e8c0e5650de1dd",
+      "url": "https://api.github.com/repos/russelldudek/Laveer/actions/jobs/88425453820",
+      "html_url": "https://github.com/russelldudek/Laveer/actions/runs/29764002688/job/88425453820",
       "status": "completed",
       "conclusion": "failure",
-      "created_at": "2026-07-20T17:28:15Z",
-      "started_at": "2026-07-20T17:28:19Z",
-      "completed_at": "2026-07-20T17:29:09Z",
+      "created_at": "2026-07-20T17:31:25Z",
+      "started_at": "2026-07-20T17:31:27Z",
+      "completed_at": "2026-07-20T17:31:53Z",
       "name": "regenerate",
       "steps": [
         {
@@ -490,385 +490,393 @@ run_id=29763800349
           "status": "completed",
           "conclusion": "success",
           "number": 1,
-          "started_at": "2026-07-20T17:28:20Z",
-          "completed_at": "2026-07-20T17:28:21Z"
+          "started_at": "2026-07-20T17:31:28Z",
+          "completed_at": "2026-07-20T17:31:29Z"
         },
         {
           "name": "Run actions/checkout@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 2,
-          "started_at": "2026-07-20T17:28:21Z",
-          "completed_at": "2026-07-20T17:28:22Z"
+          "started_at": "2026-07-20T17:31:29Z",
+          "completed_at": "2026-07-20T17:31:30Z"
         },
         {
           "name": "Install PDF inspection tools",
           "status": "completed",
           "conclusion": "success",
           "number": 3,
-          "started_at": "2026-07-20T17:28:22Z",
-          "completed_at": "2026-07-20T17:28:32Z"
+          "started_at": "2026-07-20T17:31:30Z",
+          "completed_at": "2026-07-20T17:31:42Z"
         },
         {
           "name": "Render corrected PDFs",
           "status": "completed",
           "conclusion": "success",
           "number": 4,
-          "started_at": "2026-07-20T17:28:32Z",
-          "completed_at": "2026-07-20T17:28:33Z"
+          "started_at": "2026-07-20T17:31:42Z",
+          "completed_at": "2026-07-20T17:31:49Z"
         },
         {
           "name": "Verify page counts and document integrity",
           "status": "completed",
           "conclusion": "failure",
           "number": 5,
-          "started_at": "2026-07-20T17:28:33Z",
-          "completed_at": "2026-07-20T17:28:33Z"
+          "started_at": "2026-07-20T17:31:49Z",
+          "completed_at": "2026-07-20T17:31:49Z"
         },
         {
           "name": "Commit regenerated PDFs",
           "status": "completed",
           "conclusion": "skipped",
           "number": 6,
-          "started_at": "2026-07-20T17:28:33Z",
-          "completed_at": "2026-07-20T17:28:33Z"
+          "started_at": "2026-07-20T17:31:49Z",
+          "completed_at": "2026-07-20T17:31:49Z"
         },
         {
           "name": "Post Run actions/checkout@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 12,
-          "started_at": "2026-07-20T17:28:33Z",
-          "completed_at": "2026-07-20T17:28:34Z"
+          "started_at": "2026-07-20T17:31:49Z",
+          "completed_at": "2026-07-20T17:31:50Z"
         },
         {
           "name": "Complete job",
           "status": "completed",
           "conclusion": "success",
           "number": 13,
-          "started_at": "2026-07-20T17:28:34Z",
-          "completed_at": "2026-07-20T17:28:34Z"
+          "started_at": "2026-07-20T17:31:50Z",
+          "completed_at": "2026-07-20T17:31:50Z"
         }
       ],
-      "check_run_url": "https://api.github.com/repos/russelldudek/Laveer/check-runs/88424767333",
+      "check_run_url": "https://api.github.com/repos/russelldudek/Laveer/check-runs/88425453820",
       "labels": [
         "ubuntu-latest"
       ],
-      "runner_id": 1000011315,
-      "runner_name": "GitHub Actions 1000011315",
+      "runner_id": 1000011323,
+      "runner_name": "GitHub Actions 1000011323",
       "runner_group_id": 0,
       "runner_group_name": "GitHub Actions"
     }
   ]
 }
 
---- job 88424767333 logs ---
-﻿2026-07-20T17:28:20.5046762Z Current runner version: '2.335.1'
-2026-07-20T17:28:20.5071235Z ##[group]Runner Image Provisioner
-2026-07-20T17:28:20.5072353Z Hosted Compute Agent
-2026-07-20T17:28:20.5073046Z Version: 20260707.563
-2026-07-20T17:28:20.5073689Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
-2026-07-20T17:28:20.5074462Z Build Date: 2026-07-07T19:33:50Z
-2026-07-20T17:28:20.5075178Z Worker ID: {f174c343-99b6-414f-8923-5d87d30a36cf}
-2026-07-20T17:28:20.5075927Z Azure Region: westus
-2026-07-20T17:28:20.5076887Z ##[endgroup]
-2026-07-20T17:28:20.5078506Z ##[group]Operating System
-2026-07-20T17:28:20.5079138Z Ubuntu
-2026-07-20T17:28:20.5079769Z 24.04.4
-2026-07-20T17:28:20.5080286Z LTS
-2026-07-20T17:28:20.5080874Z ##[endgroup]
-2026-07-20T17:28:20.5081455Z ##[group]Runner Image
-2026-07-20T17:28:20.5082065Z Image: ubuntu-24.04
-2026-07-20T17:28:20.5082697Z Version: 20260714.240.1
-2026-07-20T17:28:20.5083971Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
-2026-07-20T17:28:20.5085556Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
-2026-07-20T17:28:20.5086808Z ##[endgroup]
-2026-07-20T17:28:20.5088032Z ##[group]GITHUB_TOKEN Permissions
-2026-07-20T17:28:20.5090525Z Contents: write
-2026-07-20T17:28:20.5091232Z Metadata: read
-2026-07-20T17:28:20.5091807Z ##[endgroup]
-2026-07-20T17:28:20.5093864Z Secret source: Actions
-2026-07-20T17:28:20.5094725Z Prepare workflow directory
-2026-07-20T17:28:20.5434740Z Prepare all required actions
-2026-07-20T17:28:20.5474467Z Getting action download info
-2026-07-20T17:28:20.9112115Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
-2026-07-20T17:28:21.4132952Z Complete job name: regenerate
-2026-07-20T17:28:21.4985360Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-2026-07-20T17:28:21.4994506Z ##[group]Run actions/checkout@v4
-2026-07-20T17:28:21.4995247Z with:
-2026-07-20T17:28:21.4995705Z   repository: russelldudek/Laveer
-2026-07-20T17:28:21.4999801Z   token: ***
-2026-07-20T17:28:21.5000245Z   ssh-strict: true
-2026-07-20T17:28:21.5000693Z   ssh-user: git
-2026-07-20T17:28:21.5001144Z   persist-credentials: true
-2026-07-20T17:28:21.5001635Z   clean: true
-2026-07-20T17:28:21.5002083Z   sparse-checkout-cone-mode: true
-2026-07-20T17:28:21.5002608Z   fetch-depth: 1
-2026-07-20T17:28:21.5003041Z   fetch-tags: false
-2026-07-20T17:28:21.5003571Z   show-progress: true
-2026-07-20T17:28:21.5004031Z   lfs: false
-2026-07-20T17:28:21.5004484Z   submodules: false
-2026-07-20T17:28:21.5004935Z   set-safe-directory: true
-2026-07-20T17:28:21.5005445Z   allow-unsafe-pr-checkout: false
-2026-07-20T17:28:21.5006289Z ##[endgroup]
-2026-07-20T17:28:21.6010809Z Syncing repository: russelldudek/Laveer
-2026-07-20T17:28:21.6016326Z ##[group]Getting Git version info
-2026-07-20T17:28:21.6017685Z Working directory is '/home/runner/work/Laveer/Laveer'
-2026-07-20T17:28:21.6019344Z [command]/usr/bin/git version
-2026-07-20T17:28:21.6117975Z git version 2.54.0
-2026-07-20T17:28:21.6161173Z ##[endgroup]
-2026-07-20T17:28:21.6202494Z Temporarily overriding HOME='/home/runner/work/_temp/1a55241e-761b-4a21-939d-9bcbe1d9561f' before making global git config changes
-2026-07-20T17:28:21.6205158Z Adding repository directory to the temporary git global config as a safe directory
-2026-07-20T17:28:21.6218079Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Laveer/Laveer
-2026-07-20T17:28:21.6257899Z Deleting the contents of '/home/runner/work/Laveer/Laveer'
-2026-07-20T17:28:21.6278134Z ##[group]Initializing the repository
-2026-07-20T17:28:21.6288125Z [command]/usr/bin/git init /home/runner/work/Laveer/Laveer
-2026-07-20T17:28:21.6425061Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-07-20T17:28:21.6427037Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-07-20T17:28:21.6428731Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-07-20T17:28:21.6429963Z hint: call:
-2026-07-20T17:28:21.6430628Z hint:
-2026-07-20T17:28:21.6431480Z hint: 	git config --global init.defaultBranch <name>
-2026-07-20T17:28:21.6432503Z hint:
-2026-07-20T17:28:21.6433403Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-07-20T17:28:21.6434891Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-07-20T17:28:21.6436136Z hint:
-2026-07-20T17:28:21.6437033Z hint: 	git branch -m <name>
-2026-07-20T17:28:21.6437834Z hint:
-2026-07-20T17:28:21.6438875Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-07-20T17:28:21.6447844Z Initialized empty Git repository in /home/runner/work/Laveer/Laveer/.git/
-2026-07-20T17:28:21.6459699Z [command]/usr/bin/git remote add origin https://github.com/russelldudek/Laveer
-2026-07-20T17:28:21.6498999Z ##[endgroup]
-2026-07-20T17:28:21.6500289Z ##[group]Disabling automatic garbage collection
-2026-07-20T17:28:21.6502764Z [command]/usr/bin/git config --local gc.auto 0
-2026-07-20T17:28:21.6535902Z ##[endgroup]
-2026-07-20T17:28:21.6537017Z ##[group]Setting up auth
-2026-07-20T17:28:21.6549733Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-07-20T17:28:21.6587389Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-07-20T17:28:21.6955727Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-07-20T17:28:21.6997965Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-07-20T17:28:21.7236141Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-07-20T17:28:21.7273746Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-07-20T17:28:21.7536782Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-07-20T17:28:21.7576093Z ##[endgroup]
-2026-07-20T17:28:21.7585373Z ##[group]Fetching the repository
-2026-07-20T17:28:21.7587206Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed5f6bab9d9ff2a820d1c2c773514248f954d268:refs/remotes/origin/main
-2026-07-20T17:28:22.2591577Z From https://github.com/russelldudek/Laveer
-2026-07-20T17:28:22.2592742Z  * [new ref]         ed5f6bab9d9ff2a820d1c2c773514248f954d268 -> origin/main
-2026-07-20T17:28:22.2624120Z ##[endgroup]
-2026-07-20T17:28:22.2624923Z ##[group]Determining the checkout info
-2026-07-20T17:28:22.2627682Z ##[endgroup]
-2026-07-20T17:28:22.2633195Z [command]/usr/bin/git sparse-checkout disable
-2026-07-20T17:28:22.2683655Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-07-20T17:28:22.2714840Z ##[group]Checking out the ref
-2026-07-20T17:28:22.2719793Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-07-20T17:28:22.2798235Z Switched to a new branch 'main'
-2026-07-20T17:28:22.2802077Z branch 'main' set up to track 'origin/main'.
-2026-07-20T17:28:22.2807947Z ##[endgroup]
-2026-07-20T17:28:22.2853421Z [command]/usr/bin/git log -1 --format=%H
-2026-07-20T17:28:22.2879867Z ed5f6bab9d9ff2a820d1c2c773514248f954d268
-2026-07-20T17:28:22.3093137Z ##[group]Run sudo apt-get update
-2026-07-20T17:28:22.3093817Z [36;1msudo apt-get update[0m
-2026-07-20T17:28:22.3094412Z [36;1msudo apt-get install -y poppler-utils[0m
-2026-07-20T17:28:22.3175238Z shell: /usr/bin/bash -e {0}
-2026-07-20T17:28:22.3175791Z ##[endgroup]
-2026-07-20T17:28:22.4067869Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
-2026-07-20T17:28:22.4487540Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
-2026-07-20T17:28:22.4502720Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
-2026-07-20T17:28:22.4552098Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
-2026-07-20T17:28:22.4588017Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
-2026-07-20T17:28:22.4590385Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
-2026-07-20T17:28:22.4604980Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
-2026-07-20T17:28:22.5174852Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
-2026-07-20T17:28:22.5853498Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1114 kB]
-2026-07-20T17:28:22.6049343Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [272 kB]
-2026-07-20T17:28:22.6071557Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [180 kB]
-2026-07-20T17:28:22.6091580Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1661 kB]
-2026-07-20T17:28:22.6176023Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [328 kB]
-2026-07-20T17:28:22.6201503Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
-2026-07-20T17:28:22.6233841Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1256 kB]
-2026-07-20T17:28:22.6318872Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [286 kB]
-2026-07-20T17:28:22.6349143Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
-2026-07-20T17:28:22.6464829Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5788 B]
-2026-07-20T17:28:22.6890136Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.6 kB]
-2026-07-20T17:28:22.7392996Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [854 kB]
-2026-07-20T17:28:22.7453712Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [191 kB]
-2026-07-20T17:28:22.7481832Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [44.8 kB]
-2026-07-20T17:28:22.7492000Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1178 kB]
-2026-07-20T17:28:22.7613564Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [232 kB]
-2026-07-20T17:28:22.7635561Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
-2026-07-20T17:28:22.7653024Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1166 kB]
-2026-07-20T17:28:22.7718563Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [268 kB]
-2026-07-20T17:28:22.7963543Z Get:28 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [231 kB]
-2026-07-20T17:28:22.8018934Z Get:29 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [11.7 kB]
-2026-07-20T17:28:22.8044666Z Get:30 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [198 kB]
-2026-07-20T17:28:22.8759573Z Get:31 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1420 B]
-2026-07-20T17:28:26.7645405Z Fetched 10.3 MB in 1s (8479 kB/s)
-2026-07-20T17:28:27.4362244Z Reading package lists...
-2026-07-20T17:28:27.4670960Z Reading package lists...
-2026-07-20T17:28:27.6145891Z Building dependency tree...
-2026-07-20T17:28:27.6151739Z Reading state information...
-2026-07-20T17:28:27.7450632Z The following additional packages will be installed:
-2026-07-20T17:28:27.7453510Z   libpoppler134 poppler-data
-2026-07-20T17:28:27.7460706Z Suggested packages:
-2026-07-20T17:28:27.7461404Z   ghostscript fonts-japanese-mincho | fonts-ipafont-mincho
-2026-07-20T17:28:27.7463163Z   fonts-japanese-gothic | fonts-ipafont-gothic fonts-arphic-ukai
-2026-07-20T17:28:27.7463923Z   fonts-arphic-uming fonts-nanum
-2026-07-20T17:28:27.7652967Z The following NEW packages will be installed:
-2026-07-20T17:28:27.7656882Z   libpoppler134 poppler-data poppler-utils
-2026-07-20T17:28:27.7838693Z 0 upgraded, 3 newly installed, 0 to remove and 25 not upgraded.
-2026-07-20T17:28:27.7839452Z Need to get 3389 kB of archives.
-2026-07-20T17:28:27.7839858Z After this operation, 17.8 MB of additional disk space will be used.
-2026-07-20T17:28:27.7840372Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
-2026-07-20T17:28:28.0150576Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 poppler-data all 0.4.12-1 [2060 kB]
-2026-07-20T17:28:28.3317909Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpoppler134 amd64 24.02.0-1ubuntu9.9 [1118 kB]
-2026-07-20T17:28:28.5551662Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 poppler-utils amd64 24.02.0-1ubuntu9.9 [212 kB]
-2026-07-20T17:28:28.8013220Z Fetched 3389 kB in 1s (4307 kB/s)
-2026-07-20T17:28:28.8244055Z Selecting previously unselected package poppler-data.
-2026-07-20T17:28:28.8492635Z (Reading database ... 
-2026-07-20T17:28:28.8493606Z (Reading database ... 5%
-2026-07-20T17:28:28.8494305Z (Reading database ... 10%
-2026-07-20T17:28:28.8494986Z (Reading database ... 15%
-2026-07-20T17:28:28.8495411Z (Reading database ... 20%
-2026-07-20T17:28:28.8495854Z (Reading database ... 25%
-2026-07-20T17:28:28.8496270Z (Reading database ... 30%
-2026-07-20T17:28:28.8496976Z (Reading database ... 35%
-2026-07-20T17:28:28.8497469Z (Reading database ... 40%
-2026-07-20T17:28:28.8497870Z (Reading database ... 45%
-2026-07-20T17:28:28.8498275Z (Reading database ... 50%
-2026-07-20T17:28:28.8534033Z (Reading database ... 55%
-2026-07-20T17:28:28.9416081Z (Reading database ... 60%
-2026-07-20T17:28:29.1403148Z (Reading database ... 65%
-2026-07-20T17:28:29.3318763Z (Reading database ... 70%
-2026-07-20T17:28:29.4473825Z (Reading database ... 75%
-2026-07-20T17:28:29.5937050Z (Reading database ... 80%
-2026-07-20T17:28:29.7431600Z (Reading database ... 85%
-2026-07-20T17:28:29.8843165Z (Reading database ... 90%
-2026-07-20T17:28:29.9928694Z (Reading database ... 95%
-2026-07-20T17:28:29.9929842Z (Reading database ... 100%
-2026-07-20T17:28:29.9930899Z (Reading database ... 202507 files and directories currently installed.)
-2026-07-20T17:28:29.9970547Z Preparing to unpack .../poppler-data_0.4.12-1_all.deb ...
-2026-07-20T17:28:29.9998209Z Unpacking poppler-data (0.4.12-1) ...
-2026-07-20T17:28:30.3921655Z Selecting previously unselected package libpoppler134:amd64.
-2026-07-20T17:28:30.4050888Z Preparing to unpack .../libpoppler134_24.02.0-1ubuntu9.9_amd64.deb ...
-2026-07-20T17:28:30.4073528Z Unpacking libpoppler134:amd64 (24.02.0-1ubuntu9.9) ...
-2026-07-20T17:28:30.4432311Z Selecting previously unselected package poppler-utils.
-2026-07-20T17:28:30.4558182Z Preparing to unpack .../poppler-utils_24.02.0-1ubuntu9.9_amd64.deb ...
-2026-07-20T17:28:30.4568965Z Unpacking poppler-utils (24.02.0-1ubuntu9.9) ...
-2026-07-20T17:28:30.5067002Z Setting up libpoppler134:amd64 (24.02.0-1ubuntu9.9) ...
-2026-07-20T17:28:30.5096006Z Setting up poppler-data (0.4.12-1) ...
-2026-07-20T17:28:30.5209101Z Setting up poppler-utils (24.02.0-1ubuntu9.9) ...
-2026-07-20T17:28:30.5239025Z Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
-2026-07-20T17:28:30.5542295Z Processing triggers for man-db (2.12.0-4build2) ...
-2026-07-20T17:28:30.5564542Z Not building database; man-db/auto-update is not 'true'.
-2026-07-20T17:28:30.5578881Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
-2026-07-20T17:28:31.2106610Z 
-2026-07-20T17:28:31.2107241Z Running kernel seems to be up-to-date.
-2026-07-20T17:28:31.2107678Z 
-2026-07-20T17:28:31.2107854Z No services need to be restarted.
-2026-07-20T17:28:31.2108159Z 
-2026-07-20T17:28:31.2108323Z No containers need to be restarted.
-2026-07-20T17:28:31.2108829Z 
-2026-07-20T17:28:31.2108979Z No user sessions are running outdated binaries.
-2026-07-20T17:28:31.2109234Z 
-2026-07-20T17:28:31.2109475Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
-2026-07-20T17:28:32.0135655Z ##[group]Run set -euo pipefail
-2026-07-20T17:28:32.0136003Z [36;1mset -euo pipefail[0m
-2026-07-20T17:28:32.0136827Z [36;1mbrowser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || true)"[0m
-2026-07-20T17:28:32.0137445Z [36;1mif [ -z "$browser" ]; then[0m
-2026-07-20T17:28:32.0137769Z [36;1m  echo 'No Chromium-compatible browser found.' >&2[0m
-2026-07-20T17:28:32.0138086Z [36;1m  exit 1[0m
-2026-07-20T17:28:32.0138274Z [36;1mfi[0m
-2026-07-20T17:28:32.0138451Z [36;1m[0m
-2026-07-20T17:28:32.0138633Z [36;1mrender_pdf() {[0m
-2026-07-20T17:28:32.0138855Z [36;1m  local html="$1"[0m
-2026-07-20T17:28:32.0139082Z [36;1m  local output="$2"[0m
-2026-07-20T17:28:32.0139313Z [36;1m  rm -f "$output"[0m
-2026-07-20T17:28:32.0139552Z [36;1m  timeout 90 "$browser" \[0m
-2026-07-20T17:28:32.0139802Z [36;1m    --headless=new \[0m
-2026-07-20T17:28:32.0140037Z [36;1m    --no-sandbox \[0m
-2026-07-20T17:28:32.0140311Z [36;1m    --disable-gpu \[0m
-2026-07-20T17:28:32.0140559Z [36;1m    --disable-dev-shm-usage \[0m
-2026-07-20T17:28:32.0140861Z [36;1m    --disable-background-networking \[0m
-2026-07-20T17:28:32.0141157Z [36;1m    --disable-extensions \[0m
-2026-07-20T17:28:32.0141410Z [36;1m    --no-first-run \[0m
-2026-07-20T17:28:32.0141652Z [36;1m    --no-pdf-header-footer \[0m
-2026-07-20T17:28:32.0141965Z [36;1m    --run-all-compositor-stages-before-draw \[0m
-2026-07-20T17:28:32.0142287Z [36;1m    --virtual-time-budget=1500 \[0m
-2026-07-20T17:28:32.0142571Z [36;1m    --print-to-pdf="$output" \[0m
-2026-07-20T17:28:32.0142850Z [36;1m    "file://$PWD/$html"[0m
-2026-07-20T17:28:32.0143095Z [36;1m  test -s "$output"[0m
-2026-07-20T17:28:32.0143311Z [36;1m}[0m
-2026-07-20T17:28:32.0143485Z [36;1m[0m
-2026-07-20T17:28:32.0143908Z [36;1mrender_pdf interview-brief.html docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf[0m
-2026-07-20T17:28:32.0144692Z [36;1mrender_pdf assurance-case-standard.html docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf[0m
-2026-07-20T17:28:32.0208158Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2026-07-20T17:28:32.0208502Z ##[endgroup]
-2026-07-20T17:28:32.3925781Z [2799:2822:0720/172832.391766:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.3930472Z [2799:2822:0720/172832.392913:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.4923169Z [2799:2822:0720/172832.492144:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.5411264Z [2799:2822:0720/172832.539329:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.6862276Z [2799:2799:0720/172832.686002:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.6864704Z [2799:2799:0720/172832.686063:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.6873893Z [2799:2822:0720/172832.687171:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.6876087Z [2799:2822:0720/172832.687193:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.6892844Z [2799:2799:0720/172832.688193:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.6899194Z [2799:2799:0720/172832.689631:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.7327564Z [2799:2799:0720/172832.732001:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.7387398Z [2799:2799:0720/172832.733274:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.7418183Z [2799:2822:0720/172832.733326:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.7652345Z [2799:2799:0720/172832.764706:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
-2026-07-20T17:28:32.7668110Z [2799:2799:0720/172832.765343:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.7671198Z [2799:2822:0720/172832.765696:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.7929675Z [2799:2799:0720/172832.792522:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:32.7932977Z [2799:2822:0720/172832.792788:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:32.8099419Z [2799:2799:0720/172832.809700:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.2013575Z 126438 bytes written to file docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf
-2026-07-20T17:28:33.3598939Z [2958:2979:0720/172833.358912:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.3610540Z [2958:2979:0720/172833.359376:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.3698415Z [2958:2979:0720/172833.368491:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.4003022Z [2958:2979:0720/172833.399401:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.4568355Z [2958:2958:0720/172833.455497:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4595815Z [2958:2958:0720/172833.455540:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4614913Z [2958:2958:0720/172833.455723:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4619787Z [2958:2979:0720/172833.456138:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.4622977Z [2958:2979:0720/172833.456153:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.4632226Z [2958:2958:0720/172833.457809:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4832048Z [2958:2958:0720/172833.479922:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4855854Z [2958:2958:0720/172833.480058:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.4948113Z [2958:2979:0720/172833.480675:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.5028079Z [2958:2958:0720/172833.497097:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.5114064Z [2958:2958:0720/172833.497176:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
-2026-07-20T17:28:33.5209377Z [2958:2979:0720/172833.500927:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.5298660Z [2958:2958:0720/172833.505484:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.5301057Z [2958:2979:0720/172833.508823:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-2026-07-20T17:28:33.5390206Z [2958:2958:0720/172833.509833:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-2026-07-20T17:28:33.7778421Z 87126 bytes written to file docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf
-2026-07-20T17:28:33.8554875Z ##[group]Run set -euo pipefail
-2026-07-20T17:28:33.8555222Z [36;1mset -euo pipefail[0m
-2026-07-20T17:28:33.8555797Z [36;1mtest "$(pdfinfo docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf | awk '/^Pages:/ {print $2}')" = "4"[0m
-2026-07-20T17:28:33.8557055Z [36;1mtest "$(pdfinfo docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf | awk '/^Pages:/ {print $2}')" = "2"[0m
-2026-07-20T17:28:33.8557974Z [36;1mpdftotext docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf - | grep -q 'Decision architecture'[0m
-2026-07-20T17:28:33.8558867Z [36;1mpdftotext docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf - | grep -q 'Portfolio decision record'[0m
-2026-07-20T17:28:33.8559500Z [36;1mgrep -q 'grid-auto-rows: 1fr' styles.css[0m
-2026-07-20T17:28:33.8559880Z [36;1mgrep -q 'doc-grid-equal > .side-box + .side-box' styles.css[0m
-2026-07-20T17:28:33.8619308Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2026-07-20T17:28:33.8619694Z ##[endgroup]
-2026-07-20T17:28:33.8918573Z ##[error]Process completed with exit code 1.
-2026-07-20T17:28:33.9054901Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-2026-07-20T17:28:33.9056930Z Post job cleanup.
-2026-07-20T17:28:33.9908020Z [command]/usr/bin/git version
-2026-07-20T17:28:33.9951035Z git version 2.54.0
-2026-07-20T17:28:33.9991506Z Temporarily overriding HOME='/home/runner/work/_temp/bd113498-fedd-4b4d-b44a-5d2758a9b1f6' before making global git config changes
-2026-07-20T17:28:33.9992844Z Adding repository directory to the temporary git global config as a safe directory
-2026-07-20T17:28:33.9998171Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Laveer/Laveer
-2026-07-20T17:28:34.0038244Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-07-20T17:28:34.0074758Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-07-20T17:28:34.0328878Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-07-20T17:28:34.0356182Z http.https://github.com/.extraheader
-2026-07-20T17:28:34.0369061Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2026-07-20T17:28:34.0404584Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-07-20T17:28:34.0673756Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-07-20T17:28:34.0744826Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-07-20T17:28:34.1133261Z Cleaning up orphan processes
-2026-07-20T17:28:34.1428140Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+--- job 88425453820 logs ---
+﻿2026-07-20T17:31:28.7414505Z Current runner version: '2.335.1'
+2026-07-20T17:31:28.7439652Z ##[group]Runner Image Provisioner
+2026-07-20T17:31:28.7440752Z Hosted Compute Agent
+2026-07-20T17:31:28.7441426Z Version: 20260707.563
+2026-07-20T17:31:28.7442046Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-20T17:31:28.7442796Z Build Date: 2026-07-07T19:33:50Z
+2026-07-20T17:31:28.7443488Z Worker ID: {61e43fb9-889d-4936-9a1f-4b5ee526f628}
+2026-07-20T17:31:28.7444271Z Azure Region: westus2
+2026-07-20T17:31:28.7444890Z ##[endgroup]
+2026-07-20T17:31:28.7446373Z ##[group]Operating System
+2026-07-20T17:31:28.7446986Z Ubuntu
+2026-07-20T17:31:28.7447593Z 24.04.4
+2026-07-20T17:31:28.7448132Z LTS
+2026-07-20T17:31:28.7448660Z ##[endgroup]
+2026-07-20T17:31:28.7449509Z ##[group]Runner Image
+2026-07-20T17:31:28.7450101Z Image: ubuntu-24.04
+2026-07-20T17:31:28.7450720Z Version: 20260714.240.1
+2026-07-20T17:31:28.7451999Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-20T17:31:28.7453568Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+2026-07-20T17:31:28.7454520Z ##[endgroup]
+2026-07-20T17:31:28.7455620Z ##[group]GITHUB_TOKEN Permissions
+2026-07-20T17:31:28.7457882Z Contents: write
+2026-07-20T17:31:28.7458575Z Metadata: read
+2026-07-20T17:31:28.7459360Z ##[endgroup]
+2026-07-20T17:31:28.7461413Z Secret source: Actions
+2026-07-20T17:31:28.7462254Z Prepare workflow directory
+2026-07-20T17:31:28.7807295Z Prepare all required actions
+2026-07-20T17:31:28.7850635Z Getting action download info
+2026-07-20T17:31:29.1672418Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-20T17:31:29.6165290Z Complete job name: regenerate
+2026-07-20T17:31:29.7053789Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T17:31:29.7063291Z ##[group]Run actions/checkout@v4
+2026-07-20T17:31:29.7064574Z with:
+2026-07-20T17:31:29.7065355Z   repository: russelldudek/Laveer
+2026-07-20T17:31:29.7073970Z   token: ***
+2026-07-20T17:31:29.7074751Z   ssh-strict: true
+2026-07-20T17:31:29.7075503Z   ssh-user: git
+2026-07-20T17:31:29.7076254Z   persist-credentials: true
+2026-07-20T17:31:29.7077096Z   clean: true
+2026-07-20T17:31:29.7077857Z   sparse-checkout-cone-mode: true
+2026-07-20T17:31:29.7078955Z   fetch-depth: 1
+2026-07-20T17:31:29.7079778Z   fetch-tags: false
+2026-07-20T17:31:29.7080591Z   show-progress: true
+2026-07-20T17:31:29.7081322Z   lfs: false
+2026-07-20T17:31:29.7082034Z   submodules: false
+2026-07-20T17:31:29.7082512Z   set-safe-directory: true
+2026-07-20T17:31:29.7083128Z   allow-unsafe-pr-checkout: false
+2026-07-20T17:31:29.7084296Z ##[endgroup]
+2026-07-20T17:31:29.8189532Z Syncing repository: russelldudek/Laveer
+2026-07-20T17:31:29.8192208Z ##[group]Getting Git version info
+2026-07-20T17:31:29.8193270Z Working directory is '/home/runner/work/Laveer/Laveer'
+2026-07-20T17:31:29.8201551Z [command]/usr/bin/git version
+2026-07-20T17:31:29.8364557Z git version 2.54.0
+2026-07-20T17:31:29.8403733Z ##[endgroup]
+2026-07-20T17:31:29.8427606Z Temporarily overriding HOME='/home/runner/work/_temp/c698ebff-33e5-40e7-ad2a-7a71ccf438a4' before making global git config changes
+2026-07-20T17:31:29.8433736Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T17:31:29.8435835Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Laveer/Laveer
+2026-07-20T17:31:29.8504994Z Deleting the contents of '/home/runner/work/Laveer/Laveer'
+2026-07-20T17:31:29.8510679Z ##[group]Initializing the repository
+2026-07-20T17:31:29.8518592Z [command]/usr/bin/git init /home/runner/work/Laveer/Laveer
+2026-07-20T17:31:29.8671374Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-20T17:31:29.8673714Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-20T17:31:29.8676350Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-20T17:31:29.8677809Z hint: call:
+2026-07-20T17:31:29.8678671Z hint:
+2026-07-20T17:31:29.8684397Z hint: 	git config --global init.defaultBranch <name>
+2026-07-20T17:31:29.8685566Z hint:
+2026-07-20T17:31:29.8686750Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-20T17:31:29.8688419Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-20T17:31:29.8690029Z hint:
+2026-07-20T17:31:29.8690788Z hint: 	git branch -m <name>
+2026-07-20T17:31:29.8691806Z hint:
+2026-07-20T17:31:29.8693036Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-20T17:31:29.8694860Z Initialized empty Git repository in /home/runner/work/Laveer/Laveer/.git/
+2026-07-20T17:31:29.8708681Z [command]/usr/bin/git remote add origin https://github.com/russelldudek/Laveer
+2026-07-20T17:31:29.8845656Z ##[endgroup]
+2026-07-20T17:31:29.8862129Z ##[group]Disabling automatic garbage collection
+2026-07-20T17:31:29.8863415Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-20T17:31:29.8865750Z ##[endgroup]
+2026-07-20T17:31:29.8866871Z ##[group]Setting up auth
+2026-07-20T17:31:29.8868007Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T17:31:29.8907992Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T17:31:29.9302642Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T17:31:29.9337002Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T17:31:29.9564796Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T17:31:29.9602983Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T17:31:29.9826793Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-20T17:31:29.9866259Z ##[endgroup]
+2026-07-20T17:31:29.9867522Z ##[group]Fetching the repository
+2026-07-20T17:31:29.9876657Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +aa873ff21fae8ff19dc3d67273e8c0e5650de1dd:refs/remotes/origin/main
+2026-07-20T17:31:30.2709955Z From https://github.com/russelldudek/Laveer
+2026-07-20T17:31:30.2711526Z  * [new ref]         aa873ff21fae8ff19dc3d67273e8c0e5650de1dd -> origin/main
+2026-07-20T17:31:30.2751126Z ##[endgroup]
+2026-07-20T17:31:30.2752484Z ##[group]Determining the checkout info
+2026-07-20T17:31:30.2754252Z ##[endgroup]
+2026-07-20T17:31:30.2760902Z [command]/usr/bin/git sparse-checkout disable
+2026-07-20T17:31:30.2818354Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-20T17:31:30.2851114Z ##[group]Checking out the ref
+2026-07-20T17:31:30.2855438Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-20T17:31:30.2941283Z Switched to a new branch 'main'
+2026-07-20T17:31:30.2945920Z branch 'main' set up to track 'origin/main'.
+2026-07-20T17:31:30.2951324Z ##[endgroup]
+2026-07-20T17:31:30.2998483Z [command]/usr/bin/git log -1 --format=%H
+2026-07-20T17:31:30.3114647Z aa873ff21fae8ff19dc3d67273e8c0e5650de1dd
+2026-07-20T17:31:30.3256567Z ##[group]Run sudo apt-get update
+2026-07-20T17:31:30.3257338Z [36;1msudo apt-get update[0m
+2026-07-20T17:31:30.3258013Z [36;1msudo apt-get install -y poppler-utils[0m
+2026-07-20T17:31:30.3340090Z shell: /usr/bin/bash -e {0}
+2026-07-20T17:31:30.3340748Z ##[endgroup]
+2026-07-20T17:31:30.4687522Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-07-20T17:31:30.5139440Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-07-20T17:31:30.5143794Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+2026-07-20T17:31:30.5146171Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-07-20T17:31:30.5173480Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-07-20T17:31:30.5239882Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-07-20T17:31:30.5292649Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-07-20T17:31:30.5511051Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+2026-07-20T17:31:30.7253455Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [11.7 kB]
+2026-07-20T17:31:30.7353012Z Get:10 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [231 kB]
+2026-07-20T17:31:30.7407337Z Get:11 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [198 kB]
+2026-07-20T17:31:30.7750784Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1114 kB]
+2026-07-20T17:31:30.7825977Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [272 kB]
+2026-07-20T17:31:30.7866243Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [180 kB]
+2026-07-20T17:31:30.7901432Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1661 kB]
+2026-07-20T17:31:30.7967604Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [328 kB]
+2026-07-20T17:31:30.7997486Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+2026-07-20T17:31:30.8031180Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1256 kB]
+2026-07-20T17:31:30.8096146Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [286 kB]
+2026-07-20T17:31:30.8126181Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2026-07-20T17:31:30.8352139Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5788 B]
+2026-07-20T17:31:30.8804090Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.6 kB]
+2026-07-20T17:31:30.8905253Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [854 kB]
+2026-07-20T17:31:30.8963630Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [191 kB]
+2026-07-20T17:31:30.9001485Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [44.8 kB]
+2026-07-20T17:31:30.9014073Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1178 kB]
+2026-07-20T17:31:30.9090419Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [232 kB]
+2026-07-20T17:31:30.9129391Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+2026-07-20T17:31:30.9137090Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1166 kB]
+2026-07-20T17:31:30.9222021Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [268 kB]
+2026-07-20T17:31:30.9663157Z Get:31 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1420 B]
+2026-07-20T17:31:36.2674870Z Fetched 10.3 MB in 1s (7916 kB/s)
+2026-07-20T17:31:36.9458347Z Reading package lists...
+2026-07-20T17:31:36.9765881Z Reading package lists...
+2026-07-20T17:31:37.1367512Z Building dependency tree...
+2026-07-20T17:31:37.1374937Z Reading state information...
+2026-07-20T17:31:37.2764102Z The following additional packages will be installed:
+2026-07-20T17:31:37.2766108Z   libpoppler134 poppler-data
+2026-07-20T17:31:37.2772790Z Suggested packages:
+2026-07-20T17:31:37.2774006Z   ghostscript fonts-japanese-mincho | fonts-ipafont-mincho
+2026-07-20T17:31:37.2774557Z   fonts-japanese-gothic | fonts-ipafont-gothic fonts-arphic-ukai
+2026-07-20T17:31:37.2775172Z   fonts-arphic-uming fonts-nanum
+2026-07-20T17:31:37.3033178Z The following NEW packages will be installed:
+2026-07-20T17:31:37.3037105Z   libpoppler134 poppler-data poppler-utils
+2026-07-20T17:31:37.3206797Z 0 upgraded, 3 newly installed, 0 to remove and 25 not upgraded.
+2026-07-20T17:31:37.3207513Z Need to get 3389 kB of archives.
+2026-07-20T17:31:37.3208137Z After this operation, 17.8 MB of additional disk space will be used.
+2026-07-20T17:31:37.3209221Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-07-20T17:31:37.4103302Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 poppler-data all 0.4.12-1 [2060 kB]
+2026-07-20T17:31:37.5252506Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpoppler134 amd64 24.02.0-1ubuntu9.9 [1118 kB]
+2026-07-20T17:31:37.6055869Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 poppler-utils amd64 24.02.0-1ubuntu9.9 [212 kB]
+2026-07-20T17:31:37.8635473Z Fetched 3389 kB in 0s (11.4 MB/s)
+2026-07-20T17:31:37.9068249Z Selecting previously unselected package poppler-data.
+2026-07-20T17:31:37.9879685Z (Reading database ... 
+2026-07-20T17:31:37.9880719Z (Reading database ... 5%
+2026-07-20T17:31:37.9881376Z (Reading database ... 10%
+2026-07-20T17:31:37.9881788Z (Reading database ... 15%
+2026-07-20T17:31:37.9882181Z (Reading database ... 20%
+2026-07-20T17:31:37.9882559Z (Reading database ... 25%
+2026-07-20T17:31:37.9882955Z (Reading database ... 30%
+2026-07-20T17:31:37.9884856Z (Reading database ... 35%
+2026-07-20T17:31:37.9885703Z (Reading database ... 40%
+2026-07-20T17:31:37.9886300Z (Reading database ... 45%
+2026-07-20T17:31:37.9886751Z (Reading database ... 50%
+2026-07-20T17:31:38.0167111Z (Reading database ... 55%
+2026-07-20T17:31:38.3095457Z (Reading database ... 60%
+2026-07-20T17:31:38.5083246Z (Reading database ... 65%
+2026-07-20T17:31:38.7442956Z (Reading database ... 70%
+2026-07-20T17:31:38.9185854Z (Reading database ... 75%
+2026-07-20T17:31:39.1836598Z (Reading database ... 80%
+2026-07-20T17:31:39.5836705Z (Reading database ... 85%
+2026-07-20T17:31:40.0121916Z (Reading database ... 90%
+2026-07-20T17:31:40.4374290Z (Reading database ... 95%
+2026-07-20T17:31:40.4374762Z (Reading database ... 100%
+2026-07-20T17:31:40.4375354Z (Reading database ... 202507 files and directories currently installed.)
+2026-07-20T17:31:40.4435405Z Preparing to unpack .../poppler-data_0.4.12-1_all.deb ...
+2026-07-20T17:31:40.4464771Z Unpacking poppler-data (0.4.12-1) ...
+2026-07-20T17:31:40.5855453Z Selecting previously unselected package libpoppler134:amd64.
+2026-07-20T17:31:40.5979588Z Preparing to unpack .../libpoppler134_24.02.0-1ubuntu9.9_amd64.deb ...
+2026-07-20T17:31:40.6039697Z Unpacking libpoppler134:amd64 (24.02.0-1ubuntu9.9) ...
+2026-07-20T17:31:40.6417657Z Selecting previously unselected package poppler-utils.
+2026-07-20T17:31:40.6542271Z Preparing to unpack .../poppler-utils_24.02.0-1ubuntu9.9_amd64.deb ...
+2026-07-20T17:31:40.6554269Z Unpacking poppler-utils (24.02.0-1ubuntu9.9) ...
+2026-07-20T17:31:40.7273625Z Setting up libpoppler134:amd64 (24.02.0-1ubuntu9.9) ...
+2026-07-20T17:31:40.7309140Z Setting up poppler-data (0.4.12-1) ...
+2026-07-20T17:31:40.7399385Z Setting up poppler-utils (24.02.0-1ubuntu9.9) ...
+2026-07-20T17:31:40.7432521Z Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+2026-07-20T17:31:40.8033153Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-07-20T17:31:40.8088331Z Not building database; man-db/auto-update is not 'true'.
+2026-07-20T17:31:40.8104645Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+2026-07-20T17:31:41.7585450Z 
+2026-07-20T17:31:41.7586064Z Running kernel seems to be up-to-date.
+2026-07-20T17:31:41.7586451Z 
+2026-07-20T17:31:41.7586644Z No services need to be restarted.
+2026-07-20T17:31:41.7586945Z 
+2026-07-20T17:31:41.7587118Z No containers need to be restarted.
+2026-07-20T17:31:41.7587948Z 
+2026-07-20T17:31:41.7588158Z No user sessions are running outdated binaries.
+2026-07-20T17:31:41.7588522Z 
+2026-07-20T17:31:41.7589133Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-07-20T17:31:42.4846581Z ##[group]Run set -euo pipefail
+2026-07-20T17:31:42.4846928Z [36;1mset -euo pipefail[0m
+2026-07-20T17:31:42.4847455Z [36;1mbrowser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || true)"[0m
+2026-07-20T17:31:42.4847987Z [36;1mif [ -z "$browser" ]; then[0m
+2026-07-20T17:31:42.4848315Z [36;1m  echo 'No Chromium-compatible browser found.' >&2[0m
+2026-07-20T17:31:42.4848636Z [36;1m  exit 1[0m
+2026-07-20T17:31:42.4849128Z [36;1mfi[0m
+2026-07-20T17:31:42.4849309Z [36;1m[0m
+2026-07-20T17:31:42.4849487Z [36;1mrender_pdf() {[0m
+2026-07-20T17:31:42.4849708Z [36;1m  local html="$1"[0m
+2026-07-20T17:31:42.4849937Z [36;1m  local output="$2"[0m
+2026-07-20T17:31:42.4850173Z [36;1m  rm -f "$output"[0m
+2026-07-20T17:31:42.4850425Z [36;1m  timeout 90 "$browser" \[0m
+2026-07-20T17:31:42.4850681Z [36;1m    --headless=new \[0m
+2026-07-20T17:31:42.4850919Z [36;1m    --no-sandbox \[0m
+2026-07-20T17:31:42.4851205Z [36;1m    --disable-gpu \[0m
+2026-07-20T17:31:42.4851452Z [36;1m    --disable-dev-shm-usage \[0m
+2026-07-20T17:31:42.4851755Z [36;1m    --disable-background-networking \[0m
+2026-07-20T17:31:42.4852052Z [36;1m    --disable-extensions \[0m
+2026-07-20T17:31:42.4852310Z [36;1m    --no-first-run \[0m
+2026-07-20T17:31:42.4852551Z [36;1m    --no-pdf-header-footer \[0m
+2026-07-20T17:31:42.4852878Z [36;1m    --run-all-compositor-stages-before-draw \[0m
+2026-07-20T17:31:42.4853223Z [36;1m    --virtual-time-budget=1500 \[0m
+2026-07-20T17:31:42.4853533Z [36;1m    --print-to-pdf="$output" \[0m
+2026-07-20T17:31:42.4853859Z [36;1m    "file://$PWD/$html"[0m
+2026-07-20T17:31:42.4854124Z [36;1m  test -s "$output"[0m
+2026-07-20T17:31:42.4854344Z [36;1m}[0m
+2026-07-20T17:31:42.4854519Z [36;1m[0m
+2026-07-20T17:31:42.4854960Z [36;1mrender_pdf interview-brief.html docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf[0m
+2026-07-20T17:31:42.4855760Z [36;1mrender_pdf assurance-case-standard.html docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf[0m
+2026-07-20T17:31:42.4918143Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-20T17:31:42.4918491Z ##[endgroup]
+2026-07-20T17:31:45.3106986Z [2810:2833:0720/173145.307481:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:45.3110216Z [2810:2833:0720/173145.310835:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:46.0902487Z [2810:2833:0720/173146.089975:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:46.3343658Z [2810:2833:0720/173146.334117:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:47.4045416Z [2810:2810:0720/173147.404274:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.4047962Z [2810:2810:0720/173147.404332:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.4050640Z [2810:2833:0720/173147.404349:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:47.4053047Z [2810:2833:0720/173147.404363:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:47.4363693Z [2810:2810:0720/173147.436122:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.4442764Z [2810:2810:0720/173147.444116:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.6965911Z [2810:2810:0720/173147.696300:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.7046516Z [2810:2810:0720/173147.704461:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.7049101Z [2810:2833:0720/173147.704534:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:47.8768997Z [2810:2810:0720/173147.876584:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+2026-07-20T17:31:47.8771417Z [2810:2810:0720/173147.876983:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.8774274Z [2810:2833:0720/173147.877284:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:47.9834506Z [2810:2810:0720/173147.983198:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:47.9837388Z [2810:2833:0720/173147.983284:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:48.0365463Z [2810:2810:0720/173148.036285:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.1719572Z 126438 bytes written to file docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf
+2026-07-20T17:31:49.3511165Z [2979:3000:0720/173149.350005:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.3513477Z [2979:3000:0720/173149.350699:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.3591372Z [2979:3000:0720/173149.358588:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.3921004Z [2979:3000:0720/173149.390715:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.4458962Z [2979:2979:0720/173149.445566:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4461080Z [2979:2979:0720/173149.445621:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4463135Z [2979:3000:0720/173149.445659:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.4465685Z [2979:3000:0720/173149.445668:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.4467765Z [2979:2979:0720/173149.446034:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4508104Z [2979:2979:0720/173149.448033:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4725638Z [2979:2979:0720/173149.467009:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4731173Z [2979:2979:0720/173149.467480:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4733549Z [2979:3000:0720/173149.468400:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.4909821Z [2979:2979:0720/173149.490686:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.4979082Z [2979:2979:0720/173149.493949:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+2026-07-20T17:31:49.5020707Z [2979:3000:0720/173149.496342:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.5192218Z [2979:2979:0720/173149.517770:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.5260691Z [2979:3000:0720/173149.518100:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+2026-07-20T17:31:49.5374304Z [2979:2979:0720/173149.536817:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+2026-07-20T17:31:49.7972571Z 87126 bytes written to file docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf
+2026-07-20T17:31:49.8796243Z ##[group]Run set -euo pipefail
+2026-07-20T17:31:49.8796584Z [36;1mset -euo pipefail[0m
+2026-07-20T17:31:49.8797003Z [36;1minterview='docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf'[0m
+2026-07-20T17:31:49.8797627Z [36;1mstandard='docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf'[0m
+2026-07-20T17:31:49.8798186Z [36;1mtest "$(pdfinfo "$interview" | awk '/^Pages:/ {print $2}')" = "4"[0m
+2026-07-20T17:31:49.8798657Z [36;1mtest "$(pdfinfo "$standard" | awk '/^Pages:/ {print $2}')" = "2"[0m
+2026-07-20T17:31:49.8799394Z [36;1mtest "$(stat -c %s "$interview")" -gt 50000[0m
+2026-07-20T17:31:49.8799731Z [36;1mtest "$(stat -c %s "$standard")" -gt 50000[0m
+2026-07-20T17:31:49.8800063Z [36;1mpdftotext "$interview" /tmp/interview.txt[0m
+2026-07-20T17:31:49.8800395Z [36;1mpdftotext "$standard" /tmp/standard.txt[0m
+2026-07-20T17:31:49.8800703Z [36;1mtest -s /tmp/interview.txt[0m
+2026-07-20T17:31:49.8800971Z [36;1mtest -s /tmp/standard.txt[0m
+2026-07-20T17:31:49.8801297Z [36;1mgrep -qi 'architecture' /tmp/interview.txt[0m
+2026-07-20T17:31:49.8801640Z [36;1mgrep -qi 'portfolio' /tmp/standard.txt[0m
+2026-07-20T17:31:49.8801964Z [36;1mgrep -q 'grid-auto-rows: 1fr' styles.css[0m
+2026-07-20T17:31:49.8802363Z [36;1mgrep -q 'doc-grid-equal > .side-box + .side-box' styles.css[0m
+2026-07-20T17:31:49.8863566Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-20T17:31:49.8863923Z ##[endgroup]
+2026-07-20T17:31:49.9144140Z ##[error]Process completed with exit code 1.
+2026-07-20T17:31:49.9279046Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-20T17:31:49.9280636Z Post job cleanup.
+2026-07-20T17:31:50.0119038Z [command]/usr/bin/git version
+2026-07-20T17:31:50.0162400Z git version 2.54.0
+2026-07-20T17:31:50.0233304Z Temporarily overriding HOME='/home/runner/work/_temp/9a63b848-0df0-4100-b448-3b6e44ecb623' before making global git config changes
+2026-07-20T17:31:50.0234777Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-20T17:31:50.0238494Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Laveer/Laveer
+2026-07-20T17:31:50.0276391Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-20T17:31:50.0313786Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-20T17:31:50.0561716Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-20T17:31:50.0601943Z http.https://github.com/.extraheader
+2026-07-20T17:31:50.0614000Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-20T17:31:50.0649152Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-20T17:31:50.0921341Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-20T17:31:50.0958614Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-20T17:31:50.1342585Z Cleaning up orphan processes
+2026-07-20T17:31:50.1637125Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
