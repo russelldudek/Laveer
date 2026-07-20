@@ -345,6 +345,7 @@ button { font: inherit; }
   .doc-body { padding:0; background:white; }
   .doc-toolbar { display:none !important; }
   .sheet { width:8.5in; height:11in; min-height:11in; margin:0; box-shadow:none; page-break-after:always; break-after:page; overflow:hidden; }
+  .sheet + .sheet { margin-top:0; }
   .sheet:last-child { page-break-after:auto; break-after:auto; }
   a { color:inherit; text-decoration:none; }
 }
