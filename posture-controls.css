@@ -1,0 +1,46 @@
+.posture-rail .posture-step {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  border-top: 3px solid var(--line);
+  border-radius: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.posture-rail .posture-step:hover,
+.posture-rail .posture-step:focus-visible {
+  background: #fff;
+  color: var(--wh-blue-deep);
+  border-top-color: var(--wh-cyan);
+  box-shadow: 0 8px 18px rgba(18, 50, 106, .12);
+  transform: translateY(-1px);
+}
+
+.posture-rail .posture-step.active,
+.posture-rail .posture-step[aria-pressed="true"] {
+  color: var(--wh-blue-deep);
+  border-top-color: var(--wh-yellow);
+  background: #fffced;
+}
+
+.posture-rail .posture-step.active:hover,
+.posture-rail .posture-step.active:focus-visible,
+.posture-rail .posture-step[aria-pressed="true"]:hover,
+.posture-rail .posture-step[aria-pressed="true"]:focus-visible {
+  background: #fff;
+  border-top-color: var(--wh-yellow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .posture-rail .posture-step {
+    transition: none;
+  }
+
+  .posture-rail .posture-step:hover,
+  .posture-rail .posture-step:focus-visible {
+    transform: none;
+  }
+}
