@@ -1,3 +1,5 @@
+@import url('posture-transform.css');
+
 .posture-rail .posture-step {
   -webkit-appearance: none;
   appearance: none;
