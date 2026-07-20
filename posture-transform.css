@@ -1,0 +1,279 @@
+/* Posture-driven lattice transformation: one use case, four assurance burdens. */
+.lattice-board {
+  --core-scale: 1;
+  --core-background: var(--wh-blue-deep);
+  --core-color: #fff;
+  --core-border: 0 solid transparent;
+  --core-shadow: 0 18px 40px rgba(18, 50, 106, .26);
+  --core-ring-inset: -8px;
+  --core-ring-border: 1px solid transparent;
+  --core-ring-opacity: 0;
+  --beam-opacity: .28;
+  --tag-opacity: .82;
+  --piece-opacity: .76;
+  --perimeter-border: 12px solid rgba(18, 50, 106, .04);
+  --perimeter-inset: 20px;
+  --perimeter-shadow: none;
+}
+
+.lattice-board,
+.lattice-board::after,
+.lattice-board .lattice-core,
+.lattice-board .lattice-core::after,
+.lattice-board .lattice-beam,
+.lattice-board .lattice-beam::after,
+.lattice-board .assembly-piece,
+.lattice-board .evidence-tag,
+.lattice-board .evidence-tag::before,
+.lattice-board .lattice-state {
+  transition:
+    inset .42s cubic-bezier(.2, .8, .2, 1),
+    left .42s cubic-bezier(.2, .8, .2, 1),
+    right .42s cubic-bezier(.2, .8, .2, 1),
+    top .42s cubic-bezier(.2, .8, .2, 1),
+    bottom .42s cubic-bezier(.2, .8, .2, 1),
+    width .42s cubic-bezier(.2, .8, .2, 1),
+    height .42s cubic-bezier(.2, .8, .2, 1),
+    transform .42s cubic-bezier(.2, .8, .2, 1),
+    opacity .3s ease,
+    color .3s ease,
+    background-color .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.lattice-board::after {
+  inset: var(--perimeter-inset);
+  border: var(--perimeter-border);
+  box-shadow: var(--perimeter-shadow);
+}
+
+.lattice-board .lattice-core {
+  isolation: isolate;
+  transform: translate(-50%, -50%) scale(var(--core-scale));
+  background: var(--core-background);
+  color: var(--core-color);
+  border: var(--core-border);
+  box-shadow: var(--core-shadow);
+}
+
+.lattice-board .lattice-core > * {
+  position: relative;
+  z-index: 2;
+}
+
+.lattice-board .lattice-core::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: var(--core-ring-inset);
+  border: var(--core-ring-border);
+  opacity: var(--core-ring-opacity);
+  pointer-events: none;
+}
+
+.lattice-board .lattice-core small,
+.lattice-board .lattice-core em {
+  transition: color .3s ease, opacity .3s ease;
+}
+
+.lattice-board .lattice-beam {
+  opacity: var(--beam-opacity);
+}
+
+.lattice-board .lattice-beam::after {
+  opacity: .78;
+}
+
+.lattice-board .assembly-piece {
+  animation: none !important;
+  opacity: var(--piece-opacity);
+}
+
+.lattice-board .evidence-tag {
+  opacity: var(--tag-opacity);
+}
+
+/* EXPLORE: open geometry, incomplete assurance, no operational reliance. */
+.lattice-board[data-posture-state="explore"] {
+  --core-scale: .78;
+  --core-background: #f7fbfd;
+  --core-color: var(--wh-blue-deep);
+  --core-border: 2px dashed rgba(30, 194, 243, .82);
+  --core-shadow: 0 12px 28px rgba(18, 50, 106, .12);
+  --beam-opacity: .12;
+  --tag-opacity: .48;
+  --piece-opacity: .24;
+  --perimeter-border: 1px dashed rgba(30, 194, 243, .28);
+  --perimeter-inset: 54px;
+}
+
+.lattice-board[data-posture-state="explore"] .lattice-core small {
+  color: var(--lattice);
+}
+
+.lattice-board[data-posture-state="explore"] .lattice-core em {
+  color: #50627b;
+}
+
+.lattice-board[data-posture-state="explore"] .beam-h1 {
+  left: 3%; right: 3%; top: 22%; height: 28px;
+}
+
+.lattice-board[data-posture-state="explore"] .beam-h2 {
+  left: 3%; right: 3%; top: 70%; height: 28px;
+}
+
+.lattice-board[data-posture-state="explore"] .beam-v1 {
+  top: 10%; bottom: 9%; left: 18%; width: 28px;
+}
+
+.lattice-board[data-posture-state="explore"] .beam-v2 {
+  top: 10%; bottom: 9%; right: 18%; width: 28px;
+}
+
+.lattice-board[data-posture-state="explore"] .piece-top { transform: translateY(-54px); }
+.lattice-board[data-posture-state="explore"] .piece-bottom { transform: translateY(54px); }
+.lattice-board[data-posture-state="explore"] .piece-left { transform: translateX(-54px); }
+.lattice-board[data-posture-state="explore"] .piece-right { transform: translateX(54px); }
+.lattice-board[data-posture-state="explore"] .lattice-beam::after { opacity: 0; }
+.lattice-board[data-posture-state="explore"] .lattice-state {
+  background: #f7fbfd;
+  border-color: rgba(30, 194, 243, .38);
+}
+
+/* ASSIST: balanced, human-authoritative baseline. */
+.lattice-board[data-posture-state="assist"] {
+  --core-scale: 1;
+  --core-background: var(--wh-blue-deep);
+  --core-color: #fff;
+  --core-shadow: 0 18px 40px rgba(18, 50, 106, .26);
+  --beam-opacity: .28;
+  --tag-opacity: .82;
+  --piece-opacity: .76;
+}
+
+.lattice-board[data-posture-state="assist"] .beam-h1 { left: 9%; right: 9%; top: 30%; height: 42px; }
+.lattice-board[data-posture-state="assist"] .beam-h2 { left: 9%; right: 9%; top: 62%; height: 42px; }
+.lattice-board[data-posture-state="assist"] .beam-v1 { top: 14%; bottom: 12%; left: 28%; width: 42px; }
+.lattice-board[data-posture-state="assist"] .beam-v2 { top: 14%; bottom: 12%; right: 28%; width: 42px; }
+.lattice-board[data-posture-state="assist"] .assembly-piece { transform: none; }
+.lattice-board[data-posture-state="assist"] .lattice-state {
+  background: #fffced;
+  border-color: #eedb68;
+}
+
+/* CONTROL: evidence closes around monitored, recoverable production. */
+.lattice-board[data-posture-state="control"] {
+  --core-scale: .96;
+  --core-background: #102f65;
+  --core-color: #fff;
+  --core-border: 2px solid var(--wh-cyan);
+  --core-shadow: 0 20px 44px rgba(18, 50, 106, .32), 0 0 0 8px rgba(30, 194, 243, .09);
+  --core-ring-inset: -14px;
+  --core-ring-border: 2px solid rgba(30, 194, 243, .72);
+  --core-ring-opacity: 1;
+  --beam-opacity: .52;
+  --tag-opacity: .92;
+  --piece-opacity: 1;
+  --perimeter-border: 8px solid rgba(18, 50, 106, .065);
+  --perimeter-inset: 28px;
+}
+
+.lattice-board[data-posture-state="control"] .beam-h1 { left: 17%; right: 17%; top: 36%; height: 28px; }
+.lattice-board[data-posture-state="control"] .beam-h2 { left: 17%; right: 17%; top: 57%; height: 28px; }
+.lattice-board[data-posture-state="control"] .beam-v1 { top: 23%; bottom: 20%; left: 37%; width: 28px; }
+.lattice-board[data-posture-state="control"] .beam-v2 { top: 23%; bottom: 20%; right: 37%; width: 28px; }
+.lattice-board[data-posture-state="control"] .piece-top { top: 39%; transform: translateY(-8px); }
+.lattice-board[data-posture-state="control"] .piece-bottom { bottom: 37%; transform: translateY(8px); }
+.lattice-board[data-posture-state="control"] .piece-left { left: 38%; transform: translateX(-8px); }
+.lattice-board[data-posture-state="control"] .piece-right { right: 38%; transform: translateX(8px); }
+.lattice-board[data-posture-state="control"] .lattice-beam::after { opacity: 1; animation-duration: 2.4s; }
+.lattice-board[data-posture-state="control"] .lattice-state {
+  color: var(--wh-blue-deep);
+  background: #eafaff;
+  border-color: rgba(30, 194, 243, .58);
+}
+
+/* INDEPENDENT REVIEW: maximum enclosure plus independent approval perimeter. */
+.lattice-board[data-posture-state="review"] {
+  --core-scale: .91;
+  --core-background: #17376f;
+  --core-color: #fff;
+  --core-border: 3px solid var(--wh-yellow);
+  --core-shadow: 0 24px 54px rgba(18, 50, 106, .38), 0 0 0 10px rgba(107, 87, 165, .12);
+  --core-ring-inset: -20px;
+  --core-ring-border: 3px double rgba(107, 87, 165, .92);
+  --core-ring-opacity: 1;
+  --beam-opacity: .72;
+  --tag-opacity: 1;
+  --piece-opacity: 1;
+  --perimeter-border: 3px solid rgba(107, 87, 165, .72);
+  --perimeter-inset: 32px;
+  --perimeter-shadow: inset 0 0 0 10px rgba(107, 87, 165, .06);
+}
+
+.lattice-board[data-posture-state="review"] .beam-h1 { left: 23%; right: 23%; top: 39%; height: 18px; }
+.lattice-board[data-posture-state="review"] .beam-h2 { left: 23%; right: 23%; top: 55%; height: 18px; }
+.lattice-board[data-posture-state="review"] .beam-v1 { top: 27%; bottom: 25%; left: 41%; width: 18px; }
+.lattice-board[data-posture-state="review"] .beam-v2 { top: 27%; bottom: 25%; right: 41%; width: 18px; }
+.lattice-board[data-posture-state="review"] .piece-top { top: 41%; transform: none; }
+.lattice-board[data-posture-state="review"] .piece-bottom { bottom: 39%; transform: none; }
+.lattice-board[data-posture-state="review"] .piece-left { left: 40%; transform: none; }
+.lattice-board[data-posture-state="review"] .piece-right { right: 40%; transform: none; }
+.lattice-board[data-posture-state="review"] .evidence-tag::before {
+  background: var(--wh-yellow);
+  box-shadow: 0 0 0 5px rgba(253, 217, 34, .18);
+}
+.lattice-board[data-posture-state="review"] .lattice-beam::after { opacity: 1; animation-duration: 4.5s; }
+.lattice-board[data-posture-state="review"] .lattice-state {
+  color: var(--wh-blue-deep);
+  background: #f3f0fb;
+  border-color: rgba(107, 87, 165, .55);
+}
+
+@media (max-width: 720px) {
+  .lattice-board[data-posture-state="explore"] {
+    --perimeter-inset: 30px;
+  }
+  .lattice-board[data-posture-state="review"] {
+    --perimeter-inset: 20px;
+  }
+  .lattice-board[data-posture-state="review"] .lattice-core {
+    --core-scale: .86;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lattice-board,
+  .lattice-board::after,
+  .lattice-board .lattice-core,
+  .lattice-board .lattice-core::after,
+  .lattice-board .lattice-beam,
+  .lattice-board .lattice-beam::after,
+  .lattice-board .assembly-piece,
+  .lattice-board .evidence-tag,
+  .lattice-board .evidence-tag::before,
+  .lattice-board .lattice-state {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Keep the stronger control/review perimeter below the board header. */
+.lattice-board[data-posture-state="control"]::after {
+  inset: 52px 28px 28px;
+}
+
+.lattice-board[data-posture-state="review"]::after {
+  inset: 52px 32px 32px;
+}
+
+@media (max-width: 720px) {
+  .lattice-board[data-posture-state="control"]::after {
+    inset: 58px 20px 20px;
+  }
+  .lattice-board[data-posture-state="review"]::after {
+    inset: 58px 20px 20px;
+  }
+}
