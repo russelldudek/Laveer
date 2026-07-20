@@ -1,0 +1,13 @@
+Interview Thesis Brief
+Pages:           7
+Page size:       612 x 792 pts (letter)
+File size:       126438 bytes
+
+AI Assurance Case Standard
+Pages:           3
+Page size:       612 x 792 pts (letter)
+File size:       87126 bytes
+
+Alignment CSS
+  grid-auto-rows: 1fr;
+.doc-grid-equal > .side-box + .side-box {
