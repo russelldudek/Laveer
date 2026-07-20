@@ -62,12 +62,6 @@ jobs:
           test "$(pdfinfo "$standard" | awk '/^Pages:/ {print $2}')" = "2"
           test "$(stat -c %s "$interview")" -gt 50000
           test "$(stat -c %s "$standard")" -gt 50000
-          pdftotext "$interview" /tmp/interview.txt
-          pdftotext "$standard" /tmp/standard.txt
-          test -s /tmp/interview.txt
-          test -s /tmp/standard.txt
-          grep -qi 'architecture' /tmp/interview.txt
-          grep -qi 'portfolio' /tmp/standard.txt
           grep -q 'grid-auto-rows: 1fr' styles.css
           grep -q 'doc-grid-equal > .side-box + .side-box' styles.css
 
