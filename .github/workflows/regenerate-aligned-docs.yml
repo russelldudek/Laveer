@@ -19,6 +19,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils
 
+      - name: Normalize render-only print height
+        shell: bash
+        run: |
+          cat >> styles.css <<'CSS'
+
+          @media print {
+            .sheet {
+              height: calc(11in - 1px) !important;
+              min-height: calc(11in - 1px) !important;
+            }
+          }
+          CSS
+
       - name: Render corrected PDFs
         shell: bash
         run: |
@@ -52,12 +65,16 @@ jobs:
           render_pdf interview-brief.html docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf
           render_pdf assurance-case-standard.html docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf
 
-      - name: Record rendered PDF verification
+      - name: Enforce PDF contracts and record verification
         shell: bash
         run: |
           set -euo pipefail
           interview='docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf'
           standard='docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf'
+          interview_pages="$(pdfinfo "$interview" | awk '/^Pages:/ {print $2}')"
+          standard_pages="$(pdfinfo "$standard" | awk '/^Pages:/ {print $2}')"
+          test "$interview_pages" = '4'
+          test "$standard_pages" = '2'
           {
             echo 'Interview Thesis Brief'
             pdfinfo "$interview" | grep -E '^(Pages|Page size|File size):'
@@ -66,8 +83,8 @@ jobs:
             pdfinfo "$standard" | grep -E '^(Pages|Page size|File size):'
             echo
             echo 'Alignment CSS'
-            grep -F 'grid-auto-rows: 1fr' styles.css
-            grep -F 'doc-grid-equal > .side-box + .side-box' styles.css
+            grep -F 'grid-auto-rows: 1fr' styles.css | head -n 1
+            grep -F 'doc-grid-equal > .side-box + .side-box' styles.css | head -n 1
           } > pdf-verification.txt
           test -s pdf-verification.txt
 
@@ -75,8 +92,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git restore styles.css
           git config user.name 'Russell Dudek'
           git config user.email '35631821+russelldudek@users.noreply.github.com'
           git add docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf pdf-verification.txt
-          git commit -m 'Regenerate aligned governance documents'
+          git commit -m 'Restore aligned governance PDF contracts'
           git push origin main
