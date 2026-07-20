@@ -17,7 +17,7 @@ jobs:
       - name: Capture run diagnostics
         env:
           GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ed5f6bab9d9ff2a820d1c2c773514248f954d268
+          TARGET_SHA: aa873ff21fae8ff19dc3d67273e8c0e5650de1dd
         shell: bash
         run: |
           set -euo pipefail
