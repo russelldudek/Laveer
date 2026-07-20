@@ -79,12 +79,38 @@
   const measure = document.querySelector('#measure-readout');
   const rows = [...document.querySelectorAll('.evidence-row')];
   const postureSteps = [...document.querySelectorAll('.posture-step')];
+  const latticeState = document.querySelector('.lattice-state');
+  const postureLabels = new Map([
+    ['Sandbox / explore', 'Explore'],
+    ['Assisted workflow', 'Assist'],
+    ['Controlled production', 'Control'],
+    ['Independent assurance review', 'Independent review']
+  ]);
+
+  function setPosture(selectedPosture, preview = false) {
+    posture.textContent = selectedPosture;
+    postureSteps.forEach(step => {
+      const active = step.dataset.posture === selectedPosture;
+      step.classList.toggle('active', active);
+      step.setAttribute('aria-pressed', String(active));
+    });
+    if (latticeState) {
+      latticeState.textContent = preview
+        ? `Posture preview · ${postureLabels.get(selectedPosture) ?? selectedPosture}`
+        : 'Illustrative baseline';
+    }
+    if (preview) {
+      document.querySelector('.lattice-board')?.animate(
+        [{filter:'brightness(.94)'},{filter:'brightness(1)'}],
+        {duration:320}
+      );
+    }
+  }
 
   function setScenario(key) {
     const data = scenarios[key];
     buttons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.scenario === key)));
     title.textContent = data.title;
-    posture.textContent = data.posture;
     core.textContent = data.core;
     authority.textContent = data.authority;
     measure.textContent = data.measure;
@@ -97,10 +123,12 @@
       row.querySelector('.evidence-detail').textContent = detail;
       row.animate([{opacity:.35, transform:'translateY(5px)'},{opacity:1, transform:'none'}], {duration:260, delay:i*35, fill:'both'});
     });
-    postureSteps.forEach(step => step.classList.toggle('active', step.dataset.posture === data.posture));
+    setPosture(data.posture);
     document.querySelector('.lattice-board')?.animate([{filter:'brightness(.94)'},{filter:'brightness(1)'}], {duration:420});
   }
+
   buttons.forEach(button => button.addEventListener('click', () => setScenario(button.dataset.scenario)));
+  postureSteps.forEach(step => step.addEventListener('click', () => setPosture(step.dataset.posture, true)));
   document.querySelector('#reset-scenario')?.addEventListener('click', () => setScenario('engineering'));
   setScenario('engineering');
 })();
