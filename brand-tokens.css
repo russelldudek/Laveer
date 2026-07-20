@@ -1,0 +1,20 @@
+:root {
+  /* Westinghouse public-site source-sampled recognition layer */
+  --wh-blue: #253470;
+  --wh-blue-deep: #12326a;
+  --wh-blue-bright: #0675bc;
+  --wh-cyan: #1ec2f3;
+  --wh-green: #487c09;
+  --wh-yellow: #fdd922;
+  --wh-red: #78272a;
+  /* Candidate-original support colors for the assurance lattice */
+  --ink: #10213b;
+  --muted: #5a6677;
+  --paper: #ffffff;
+  --mist: #f2f7fa;
+  --ice: #e7f4f8;
+  --lattice: #6b57a5;
+  --lattice-soft: #ece9f7;
+  --line: #c8d8e4;
+  --shadow: 0 24px 70px rgba(18, 50, 106, .14);
+}

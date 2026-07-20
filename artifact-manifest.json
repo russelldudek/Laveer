@@ -1,0 +1,36 @@
+{
+  "routes": [
+    "index.html",
+    "resume.html",
+    "cover-letter.html",
+    "interview-brief.html",
+    "120-day-plan.html",
+    "assurance-case-standard.html"
+  ],
+  "source": [
+    "styles.css",
+    "brand-tokens.css",
+    "app.js",
+    "brand-intelligence.md",
+    "role-intelligence.md",
+    "campaign-metadata.json",
+    "artifact-manifest.json",
+    "research-sources.md",
+    "README.md",
+    "campaign-audit.md"
+  ],
+  "assets": [
+    "assets/brand/westinghouse-logo-blue.png",
+    "assets/brand/westinghouse-logo-white.png",
+    "assets/company/ap1000-pwr-circle.png",
+    "assets/brand/official-source-urls.txt",
+    "assets/brand/asset-checksums.sha256"
+  ],
+  "pdfs": [
+    "docs/Russell-Dudek-Westinghouse-AI-Governance-Resume.pdf",
+    "docs/Russell-Dudek-Westinghouse-AI-Governance-Cover-Letter.pdf",
+    "docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf",
+    "docs/Russell-Dudek-Westinghouse-120-Day-Plan.pdf",
+    "docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf"
+  ]
+}
