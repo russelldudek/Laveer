@@ -1,0 +1,91 @@
+name: Finalize aligned print documents
+
+on:
+  push:
+    paths:
+      - '.github/workflows/finalize-print-alignment.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Correct print sheet spacing
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('styles.css')
+          css = path.read_text(encoding='utf-8')
+          rule = '  .sheet + .sheet { margin-top:0; }\n'
+          if rule not in css:
+              anchor = '  .sheet:last-child { page-break-after:auto; break-after:auto; }\n'
+              if anchor not in css:
+                  raise SystemExit('Print anchor not found')
+              css = css.replace(anchor, rule + anchor, 1)
+          path.write_text(css, encoding='utf-8')
+          PY
+
+      - name: Render aligned PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || true)"
+          test -n "$browser"
+
+          render_pdf() {
+            local html="$1"
+            local output="$2"
+            rm -f "$output"
+            timeout 90 "$browser" \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --disable-dev-shm-usage \
+              --disable-background-networking \
+              --disable-extensions \
+              --no-first-run \
+              --no-pdf-header-footer \
+              --run-all-compositor-stages-before-draw \
+              --virtual-time-budget=1500 \
+              --print-to-pdf="$output" \
+              "file://$PWD/$html"
+            test -s "$output"
+          }
+
+          render_pdf interview-brief.html docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf
+          render_pdf assurance-case-standard.html docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf
+
+      - name: Enforce print contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          interview='docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf'
+          standard='docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf'
+          test "$(pdfinfo "$interview" | awk '/^Pages:/ {print $2}')" = '4'
+          test "$(pdfinfo "$standard" | awk '/^Pages:/ {print $2}')" = '2'
+          test "$(stat -c %s "$interview")" -gt 25000
+          test "$(stat -c %s "$standard")" -gt 20000
+          grep -Fq '.sheet + .sheet { margin-top:0; }' styles.css
+          grep -Fq 'grid-auto-rows: 1fr' styles.css
+          grep -Fq 'doc-grid-equal > .side-box + .side-box' styles.css
+
+      - name: Commit aligned print documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Russell Dudek'
+          git config user.email '35631821+russelldudek@users.noreply.github.com'
+          git add styles.css docs/Russell-Dudek-Westinghouse-Interview-Thesis-Brief.pdf docs/Russell-Dudek-Westinghouse-AI-Assurance-Case-Standard.pdf
+          git commit -m 'Align document cards across web and print'
+          git push origin main
