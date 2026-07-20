@@ -366,3 +366,69 @@ button { font: inherit; }
   .page-continuation span { overflow-wrap: anywhere; }
   .page-label { position: static; margin-top: 20px; text-align: right; }
 }
+
+/* LAVEER-LAYOUT-FIXES-START */
+/* Keep paired document cards on the same baseline and at equal height. */
+.doc-grid-equal {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+.doc-grid-equal > .side-box,
+.doc-grid-equal > .side-box + .side-box {
+  height: 100%;
+  margin-top: 0;
+}
+
+/* Give every posture an identical vertical box and text baseline. */
+.posture-rail {
+  align-items: stretch;
+}
+.posture-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 6px;
+  line-height: 1.15;
+}
+
+/* Make the five campaign artifacts equal, fully clickable controls. */
+.document-links {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  width: min(100%, 1500px);
+  margin: 36px auto 0;
+}
+.document-links .btn {
+  width: 100%;
+  height: 100%;
+  min-height: 66px;
+  padding: 16px 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  line-height: 1.2;
+  text-align: center;
+}
+.document-links .btn:hover,
+.document-links .btn:focus-visible,
+.document-links .btn.secondary:hover,
+.document-links .btn.secondary:focus-visible {
+  color: var(--wh-blue-deep);
+  background: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .document-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .document-links {
+    grid-template-columns: 1fr;
+  }
+}
+/* LAVEER-LAYOUT-FIXES-END */
