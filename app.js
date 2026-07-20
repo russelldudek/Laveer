@@ -70,8 +70,10 @@
       ]
     }
   };
+
   const buttons = [...document.querySelectorAll('[data-scenario]')];
   if (!buttons.length) return;
+
   const title = document.querySelector('#case-title');
   const posture = document.querySelector('#case-posture');
   const core = document.querySelector('#lattice-core-title');
@@ -80,51 +82,97 @@
   const rows = [...document.querySelectorAll('.evidence-row')];
   const postureSteps = [...document.querySelectorAll('.posture-step')];
   const latticeState = document.querySelector('.lattice-state');
-  const postureLabels = new Map([
-    ['Sandbox / explore', 'Explore'],
-    ['Assisted workflow', 'Assist'],
-    ['Controlled production', 'Control'],
-    ['Independent assurance review', 'Independent review']
+  const board = document.querySelector('.lattice-board');
+  const coreMode = document.querySelector('.lattice-core small');
+  const coreMessage = document.querySelector('.lattice-core em');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  const postureVisuals = new Map([
+    ['Sandbox / explore', {
+      state: 'explore',
+      mode: 'Explore',
+      message: 'Bounded experiment. No operational reliance.',
+      label: 'Explore · bounded sandbox',
+      announcement: 'Explore posture, open sandbox with minimum operational dependence'
+    }],
+    ['Assisted workflow', {
+      state: 'assist',
+      mode: 'Assist',
+      message: 'Human-authoritative support. Engineer decides.',
+      label: 'Assist · human-authoritative',
+      announcement: 'Assist posture, human-authoritative workflow support'
+    }],
+    ['Controlled production', {
+      state: 'control',
+      mode: 'Control',
+      message: 'Validated, monitored, and recoverable.',
+      label: 'Control · monitored production',
+      announcement: 'Control posture, monitored production with recovery controls'
+    }],
+    ['Independent assurance review', {
+      state: 'review',
+      mode: 'Independent review',
+      message: 'Independent approval and explicit stop rights.',
+      label: 'Independent review · qualified authority',
+      announcement: 'Independent review posture, qualified approval and explicit stop rights'
+    }]
   ]);
 
   function setPosture(selectedPosture, preview = false) {
+    const visual = postureVisuals.get(selectedPosture) ?? postureVisuals.get('Assisted workflow');
     posture.textContent = selectedPosture;
+
+    if (board) {
+      board.dataset.postureState = visual.state;
+      board.setAttribute('aria-label', `AI Assurance Lattice. ${visual.announcement}.`);
+    }
+    if (coreMode) coreMode.textContent = visual.mode;
+    if (coreMessage) coreMessage.textContent = visual.message;
+
     postureSteps.forEach(step => {
       const active = step.dataset.posture === selectedPosture;
       step.classList.toggle('active', active);
       step.setAttribute('aria-pressed', String(active));
     });
+
     if (latticeState) {
-      latticeState.textContent = preview
-        ? `Posture preview · ${postureLabels.get(selectedPosture) ?? selectedPosture}`
-        : 'Illustrative baseline';
+      latticeState.setAttribute('aria-live', 'polite');
+      latticeState.textContent = visual.label;
     }
-    if (preview) {
-      document.querySelector('.lattice-board')?.animate(
-        [{filter:'brightness(.94)'},{filter:'brightness(1)'}],
-        {duration:320}
+
+    if (preview && board && !prefersReducedMotion.matches) {
+      board.animate(
+        [{filter:'brightness(.95)'},{filter:'brightness(1)'}],
+        {duration:320, easing:'ease-out'}
       );
     }
   }
 
   function setScenario(key) {
     const data = scenarios[key];
-    buttons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.scenario === key)));
+    buttons.forEach(button => button.setAttribute('aria-selected', String(button.dataset.scenario === key)));
     title.textContent = data.title;
     core.textContent = data.core;
     authority.textContent = data.authority;
     measure.textContent = data.measure;
-    rows.forEach((row, i) => {
-      const [label, cls, status, detail] = data.rows[i];
+    rows.forEach((row, index) => {
+      const [label, cls, status, detail] = data.rows[index];
       row.querySelector('.evidence-label').textContent = label;
       const statusNode = row.querySelector('.evidence-status');
       statusNode.className = `evidence-status ${cls}`;
       statusNode.textContent = status;
       row.querySelector('.evidence-detail').textContent = detail;
-      row.animate([{opacity:.35, transform:'translateY(5px)'},{opacity:1, transform:'none'}], {duration:260, delay:i*35, fill:'both'});
+      if (!prefersReducedMotion.matches) {
+        row.animate(
+          [{opacity:.35, transform:'translateY(5px)'},{opacity:1, transform:'none'}],
+          {duration:260, delay:index * 35, fill:'both'}
+        );
+      }
     });
     setPosture(data.posture);
-    document.querySelector('.lattice-board')?.animate([{filter:'brightness(.94)'},{filter:'brightness(1)'}], {duration:420});
+    if (board && !prefersReducedMotion.matches) {
+      board.animate([{filter:'brightness(.94)'},{filter:'brightness(1)'}], {duration:420});
+    }
   }
 
   buttons.forEach(button => button.addEventListener('click', () => setScenario(button.dataset.scenario)));
