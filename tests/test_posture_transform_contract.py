@@ -22,6 +22,12 @@ class PostureTransformationContract(unittest.TestCase):
         self.assertIn("coreMessage.textContent = visual.message", script)
         self.assertIn("latticeState.setAttribute('aria-live', 'polite')", script)
 
+    def test_initial_and_reset_state_begin_with_explore(self):
+        script = (ROOT / "app.js").read_text(encoding="utf-8")
+        self.assertIn("const baselinePosture = 'Sandbox / explore'", script)
+        self.assertIn("setScenario('engineering', baselinePosture)", script)
+        self.assertIn("resetScenario?.addEventListener('click', () => setScenario('engineering', baselinePosture))", script)
+
     def test_css_defines_all_four_visual_states_and_reduced_motion(self):
         controls = (ROOT / "posture-controls.css").read_text(encoding="utf-8")
         self.assertIn("@import url('posture-transform.css');", controls)
