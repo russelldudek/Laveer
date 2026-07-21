@@ -30,15 +30,15 @@
     </div>
     <div class="assurance-stage" aria-label="Animated AI Assurance Lattice">
       <div class="stage-halo"></div>
-      <div class="lattice-board">
-        <div class="lattice-head"><span class="lattice-title">AI Assurance Lattice</span><span class="lattice-state">Illustrative baseline</span></div>
+      <div class="lattice-board" data-posture-state="explore">
+        <div class="lattice-head"><span class="lattice-title">AI Assurance Lattice</span><span class="lattice-state" aria-live="polite">Explore · bounded sandbox</span></div>
         <div class="lattice-beam beam-h1"></div><div class="lattice-beam beam-h2"></div><div class="lattice-beam beam-v1"></div><div class="lattice-beam beam-v2"></div>
         <div class="assembly-piece piece-top"></div><div class="assembly-piece piece-bottom"></div><div class="assembly-piece piece-left"></div><div class="assembly-piece piece-right"></div>
         <div class="evidence-tag tag-mission">Mission and decision boundary</div><div class="evidence-tag tag-data">Data pedigree</div><div class="evidence-tag tag-model">Model evidence</div><div class="evidence-tag tag-human">Human authority</div><div class="evidence-tag tag-control">Security and compliance</div><div class="evidence-tag tag-outcome">Outcome telemetry</div>
-        <div class="lattice-core"><small>Use case</small><strong id="lattice-core-title">Engineering knowledge assistant</strong><em>Evidence travels with the work.</em></div>
+        <div class="lattice-core"><small>Explore</small><strong id="lattice-core-title">Engineering knowledge assistant</strong><em>Bounded experiment. No operational reliance.</em></div>
         <div class="posture-rail" role="group" aria-label="Operating postures">
-          <button type="button" class="posture-step" data-posture="Sandbox / explore" aria-pressed="false">Explore</button>
-          <button type="button" class="posture-step active" data-posture="Assisted workflow" aria-pressed="true">Assist</button>
+          <button type="button" class="posture-step active" data-posture="Sandbox / explore" aria-pressed="true">Explore</button>
+          <button type="button" class="posture-step" data-posture="Assisted workflow" aria-pressed="false">Assist</button>
           <button type="button" class="posture-step" data-posture="Controlled production" aria-pressed="false">Control</button>
           <button type="button" class="posture-step" data-posture="Independent assurance review" aria-pressed="false">Independent review</button>
         </div>
@@ -80,7 +80,7 @@
         <p class="assumption-note">These scenarios are candidate hypotheses for discovery, not claims about undisclosed Westinghouse deployments or internal controls.</p>
       </div>
       <div class="case-panel" aria-live="polite">
-        <div class="case-header"><div><span class="doc-kicker">Illustrative assurance case</span><h3 id="case-title">Engineering knowledge assistant</h3></div><span class="posture" id="case-posture">Assisted workflow</span></div>
+        <div class="case-header"><div><span class="doc-kicker">Illustrative assurance case</span><h3 id="case-title">Engineering knowledge assistant</h3></div><span class="posture" id="case-posture">Sandbox / explore</span></div>
         <ol class="evidence-list">
           <li class="evidence-row"><span class="evidence-label">Mission &amp; boundary</span><span class="evidence-status bound">Bound</span><span class="evidence-detail">Retrieve and synthesize approved technical knowledge; no autonomous engineering decision.</span></li>
           <li class="evidence-row"><span class="evidence-label">Data pedigree</span><span class="evidence-status ready">Ready</span><span class="evidence-detail">Approved corpora, source ownership, document status, lineage, and citation behavior.</span></li>

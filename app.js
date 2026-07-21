@@ -148,7 +148,7 @@
     }
   }
 
-  function setScenario(key) {
+  function setScenario(key, postureOverride = null) {
     const data = scenarios[key];
     buttons.forEach(button => button.setAttribute('aria-selected', String(button.dataset.scenario === key)));
     title.textContent = data.title;
@@ -169,14 +169,16 @@
         );
       }
     });
-    setPosture(data.posture);
+    setPosture(postureOverride ?? data.posture);
     if (board && !prefersReducedMotion.matches) {
       board.animate([{filter:'brightness(.94)'},{filter:'brightness(1)'}], {duration:420});
     }
   }
 
+  const baselinePosture = 'Sandbox / explore';
+  const resetScenario = document.querySelector('#reset-scenario');
   buttons.forEach(button => button.addEventListener('click', () => setScenario(button.dataset.scenario)));
   postureSteps.forEach(step => step.addEventListener('click', () => setPosture(step.dataset.posture, true)));
-  document.querySelector('#reset-scenario')?.addEventListener('click', () => setScenario('engineering'));
-  setScenario('engineering');
+  resetScenario?.addEventListener('click', () => setScenario('engineering', baselinePosture));
+  setScenario('engineering', baselinePosture);
 })();
