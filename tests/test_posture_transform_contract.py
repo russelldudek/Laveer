@@ -13,6 +13,15 @@ class PostureTransformationContract(unittest.TestCase):
         self.assertIn('data-posture="Controlled production"', html)
         self.assertIn('data-posture="Independent assurance review"', html)
 
+    def test_markup_starts_on_explore_without_waiting_for_javascript(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('class="lattice-board" data-posture-state="explore"', html)
+        self.assertIn('class="posture-step active" data-posture="Sandbox / explore" aria-pressed="true"', html)
+        self.assertIn('class="posture-step" data-posture="Assisted workflow" aria-pressed="false"', html)
+        self.assertIn('id="case-posture">Sandbox / explore</span>', html)
+        self.assertIn('<small>Explore</small>', html)
+        self.assertIn('<em>Bounded experiment. No operational reliance.</em>', html)
+
     def test_javascript_maps_all_four_postures_to_visual_states(self):
         script = (ROOT / "app.js").read_text(encoding="utf-8")
         for state in ("explore", "assist", "control", "review"):
