@@ -1,0 +1,106 @@
+name: Set Explore as lattice baseline
+
+on:
+  push:
+    paths:
+      - '.github/workflows/set-explore-baseline.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Explore as static, startup, and reset baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          app_path = Path('app.js')
+          app = app_path.read_text(encoding='utf-8')
+
+          replacements = [
+              (
+                  '  function setScenario(key) {',
+                  '  function setScenario(key, postureOverride = null) {'
+              ),
+              (
+                  '    setPosture(data.posture);',
+                  '    setPosture(postureOverride ?? data.posture);'
+              ),
+              (
+                  "  buttons.forEach(button => button.addEventListener('click', () => setScenario(button.dataset.scenario)));\n"
+                  "  postureSteps.forEach(step => step.addEventListener('click', () => setPosture(step.dataset.posture, true)));\n"
+                  "  document.querySelector('#reset-scenario')?.addEventListener('click', () => setScenario('engineering'));\n"
+                  "  setScenario('engineering');",
+                  "  const baselinePosture = 'Sandbox / explore';\n"
+                  "  const resetScenario = document.querySelector('#reset-scenario');\n"
+                  "  buttons.forEach(button => button.addEventListener('click', () => setScenario(button.dataset.scenario)));\n"
+                  "  postureSteps.forEach(step => step.addEventListener('click', () => setPosture(step.dataset.posture, true)));\n"
+                  "  resetScenario?.addEventListener('click', () => setScenario('engineering', baselinePosture));\n"
+                  "  setScenario('engineering', baselinePosture);"
+              ),
+          ]
+
+          for old, new in replacements:
+              if old not in app:
+                  raise SystemExit(f'Expected app.js source not found: {old[:80]!r}')
+              app = app.replace(old, new, 1)
+          app_path.write_text(app, encoding='utf-8')
+
+          html_path = Path('index.html')
+          html = html_path.read_text(encoding='utf-8')
+          html_replacements = [
+              ('<div class="lattice-board">', '<div class="lattice-board" data-posture-state="explore">'),
+              ('<span class="lattice-state">Illustrative baseline</span>', '<span class="lattice-state" aria-live="polite">Explore · bounded sandbox</span>'),
+              ('<div class="lattice-core"><small>Use case</small><strong id="lattice-core-title">Engineering knowledge assistant</strong><em>Evidence travels with the work.</em></div>', '<div class="lattice-core"><small>Explore</small><strong id="lattice-core-title">Engineering knowledge assistant</strong><em>Bounded experiment. No operational reliance.</em></div>'),
+              ('<button type="button" class="posture-step" data-posture="Sandbox / explore" aria-pressed="false">Explore</button>', '<button type="button" class="posture-step active" data-posture="Sandbox / explore" aria-pressed="true">Explore</button>'),
+              ('<button type="button" class="posture-step active" data-posture="Assisted workflow" aria-pressed="true">Assist</button>', '<button type="button" class="posture-step" data-posture="Assisted workflow" aria-pressed="false">Assist</button>'),
+              ('<span class="posture" id="case-posture">Assisted workflow</span>', '<span class="posture" id="case-posture">Sandbox / explore</span>'),
+          ]
+          for old, new in html_replacements:
+              if old not in html:
+                  raise SystemExit(f'Expected index.html source not found: {old[:80]!r}')
+              html = html.replace(old, new, 1)
+          html_path.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Run contract tests
+        run: python -m unittest tests/test_posture_transform_contract.py -v
+
+      - name: Verify rendered startup state
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || true)"
+          test -n "$browser"
+          timeout 60 "$browser" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --disable-dev-shm-usage \
+            --disable-background-networking \
+            --disable-extensions \
+            --no-first-run \
+            --virtual-time-budget=1200 \
+            --dump-dom \
+            "file://$PWD/index.html" > /tmp/laveer-dom.html
+          grep -Fq 'data-posture-state="explore"' /tmp/laveer-dom.html
+          grep -Fq 'data-posture="Sandbox / explore" aria-pressed="true"' /tmp/laveer-dom.html
+          grep -Fq 'id="case-posture">Sandbox / explore</span>' /tmp/laveer-dom.html
+          grep -Fq 'Bounded experiment. No operational reliance.' /tmp/laveer-dom.html
+
+      - name: Commit verified baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Russell Dudek'
+          git config user.email '35631821+russelldudek@users.noreply.github.com'
+          git add app.js index.html
+          git commit -m 'Start assurance lattice on Explore'
+          git push origin main
